@@ -1,3 +1,4 @@
+package org.dice_research.opal.catfish;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
