@@ -1,25 +1,43 @@
 package org.dice_research.opal.catfish;
 
 import org.apache.jena.rdf.model.Model;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
+/**
+ * OPAL RDF and DCAT cleaning component.
+ * 
+ * @author Adrian Wilke
+ */
 @SuppressWarnings("deprecation")
 public class Catfish implements ModelProcessor, JenaModelProcessor {
 
-	private static final Logger LOGGER = LogManager.getLogger();
+	private boolean removeEmptyBlankNodes = true;
+	private boolean removeEmptyLiterals = true;
 
 	@Override
 	public void processModel(Model model, String datasetUri) throws Exception {
 
-		// TODO: clean model
+		// Clean structural contents, e.g. empty values
+		new StructuralCleaner(this).clean(model, datasetUri);
+	}
 
-		if (model.isEmpty()) {
-			LOGGER.warn("Model is empty.");
-		}
+	public boolean isRemovingEmptyBlankNodes() {
+		return removeEmptyBlankNodes;
+	}
 
+	public boolean isRemovingEmptyLiterals() {
+		return removeEmptyLiterals;
+	}
+
+	public Catfish removeEmptyBlankNodes(boolean removeEmptyBlankNodes) {
+		this.removeEmptyBlankNodes = removeEmptyBlankNodes;
+		return this;
+	}
+
+	public Catfish removeEmptyLiterals(boolean removeEmptyLiterals) {
+		this.removeEmptyLiterals = removeEmptyLiterals;
+		return this;
 	}
 
 	/**

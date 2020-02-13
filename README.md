@@ -10,7 +10,7 @@ Add the following lines to your `pom.xml` configuration file:
 		<dependency>
 			<groupId>org.dice-research.opal</groupId>
 			<artifactId>catfish</artifactId>
-			<version>[0,1)</version>
+			<version>[1,2)</version>
 		</dependency>
 	</dependencies>
 	
@@ -29,6 +29,16 @@ Add the following lines to your `pom.xml` configuration file:
 
 Available versions are listed at [maven.aksw.org](https://maven.aksw.org/archiva/#advancedsearch~internal/org.dice-research.opal~catfish~~~~~30).
 
+
+## Configuration
+
+```Java
+// Remove triples containing empty literals as objects (default: true)
+Catfish catfish = new Catfish().removeEmptyLiterals(true);
+
+// Remove triples containing blank noded as objects, which are not used as subjects in other triples (default: true)
+Catfish catfish = new Catfish().removeEmptyBlankNodes(true);
+```
 
 ## Credits
 
