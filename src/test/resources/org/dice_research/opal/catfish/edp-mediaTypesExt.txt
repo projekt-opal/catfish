@@ -1,0 +1,82 @@
+# https://www.europeandataportal.eu/sparql
+#
+# PREFIX dcat: <http://www.w3.org/ns/dcat#>
+# PREFIX dct: <http://purl.org/dc/terms/>
+# SELECT DISTINCT ?mediaTypeExt  (COUNT(DISTINCT ?distribution) as ?count)
+# WHERE {
+#     ?distribution a dcat:Distribution .
+#     ?distribution dcat:mediaType ?mediaType .
+#     ?mediaType ?p ?mediaTypeExt
+# }
+# GROUP BY ?mediaTypeExt
+# ORDER BY DESC(?count)
+#
+# 2020-02-14
+#
+# mediaTypeExt
+# count
+#
+http://purl.org/dc/terms/MediaTypeOrExtent	
+35713
+"application/xml"
+13797
+"application/zip"
+7611
+"text/csv"
+3461
+"application/json"
+2794
+"application/vnd.google-earth.kml+xml"
+2543
+"application/vnd.ms-excel"
+1631
+"application/vnd.geo+json"
+966
+"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+933
+"text/html"
+728
+"application/pdf"
+572
+"text/xml"
+225
+"application/vnd.sqlite3"
+75
+"application/vnd.ms-access"
+72
+"text/plain"
+66
+"application/gml+xml"
+59
+"image/png"
+54
+"application/sparql-query"
+41
+"application/atom+xml"
+22
+"text/turtle"
+15
+"application/rdf+xml"
+15
+"application/n-triples"
+13
+"application/dwca"
+8
+"application/octet-stream"
+4
+"application/x-netcdf"
+3
+"image/tiff"
+2
+"application/x-msdos-program"
+2
+"application/kml"
+1
+"application/map"
+1
+"TF_POP_STRUCT_SECTORS_2014.xlsx"
+1
+"TF_POP_STRUCT_SECTORS_2014.zip"
+1
+"HTML/ afbeelding"
+1
