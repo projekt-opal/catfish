@@ -23,7 +23,7 @@ public class StructuralCleaner {
 		this.catfish = catfish;
 	}
 
-	public void clean(Model model, String datasetUri) throws Exception {
+	public void clean(Model model) {
 		StmtIterator stmtIterator = model.listStatements();
 		List<Statement> statementsToRemove = new LinkedList<>();
 		while (stmtIterator.hasNext()) {

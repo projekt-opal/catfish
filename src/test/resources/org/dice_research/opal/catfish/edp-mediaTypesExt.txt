@@ -16,7 +16,7 @@
 # mediaTypeExt
 # count
 #
-http://purl.org/dc/terms/MediaTypeOrExtent	
+http://purl.org/dc/terms/MediaTypeOrExtent
 35713
 "application/xml"
 13797

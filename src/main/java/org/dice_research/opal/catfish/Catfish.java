@@ -14,12 +14,20 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 	private boolean removeEmptyBlankNodes = true;
 	private boolean removeEmptyLiterals = true;
+	private boolean cleanFormats = true;
 
 	@Override
-	public void processModel(Model model, String datasetUri) throws Exception {
+	public void processModel(Model model, String datasetUri) {
 
 		// Clean structural contents, e.g. empty values
-		new StructuralCleaner(this).clean(model, datasetUri);
+		if (isRemovingEmptyBlankNodes() || isRemovingEmptyLiterals()) {
+			new StructuralCleaner(this).clean(model);
+		}
+
+		// Clean formats and mediaTypes
+		if (isCleaningFormats()) {
+			new FormatCleaner().clean(model, model.getResource(datasetUri));
+		}
 	}
 
 	public boolean isRemovingEmptyBlankNodes() {
@@ -30,6 +38,10 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 		return removeEmptyLiterals;
 	}
 
+	public boolean isCleaningFormats() {
+		return cleanFormats;
+	}
+
 	public Catfish removeEmptyBlankNodes(boolean removeEmptyBlankNodes) {
 		this.removeEmptyBlankNodes = removeEmptyBlankNodes;
 		return this;
@@ -37,6 +49,11 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 	public Catfish removeEmptyLiterals(boolean removeEmptyLiterals) {
 		this.removeEmptyLiterals = removeEmptyLiterals;
+		return this;
+	}
+
+	public Catfish cleanFormats(boolean cleanFormats) {
+		this.cleanFormats = cleanFormats;
 		return this;
 	}
 

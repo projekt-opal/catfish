@@ -56,7 +56,7 @@ public class StructuralCleanerTest {
 		Assert.assertTrue("Catfish removes empty literal", testModel.size() < testCaseA.getModel().size());
 
 		testModel = getModelCopy(testCaseA);
-		new StructuralCleaner(new Catfish()).clean(testModel, testCaseA.getDatasetUri());
+		new StructuralCleaner(new Catfish()).clean(testModel);
 		Assert.assertTrue("StructuralCleaner removes empty literal", testModel.size() < testCaseA.getModel().size());
 
 		Literal emptyEnLiteral = ResourceFactory.createLangLiteral("", "en");
@@ -88,7 +88,7 @@ public class StructuralCleanerTest {
 		Assert.assertTrue("Catfish removes empty blank node", testModel.size() < testCaseB.getModel().size());
 
 		testModel = getModelCopy(testCaseB);
-		new StructuralCleaner(new Catfish()).clean(testModel, testCaseB.getDatasetUri());
+		new StructuralCleaner(new Catfish()).clean(testModel);
 		Assert.assertTrue("StructuralCleaner removes empty blank node", testModel.size() < testCaseB.getModel().size());
 
 		StmtIterator stmtIterator = testCaseB.getModel().getResource(distWithEbnUri).listProperties(DCTerms.rights);

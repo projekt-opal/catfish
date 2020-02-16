@@ -17,7 +17,7 @@
 # mediaType
 # count
 #
-http://www.iana.org/assignments/media-types/text/plain	
+http://www.iana.org/assignments/media-types/text/plain
 79165
 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 41516
@@ -25,7 +25,7 @@ http://www.iana.org/assignments/media-types/text/plain
 30446
 "csv"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 28823
-http://www.iana.org/assignments/media-types/text/csv	
+http://www.iana.org/assignments/media-types/text/csv
 23914
 "text/csv"
 20223
@@ -45,7 +45,7 @@ http://www.iana.org/assignments/media-types/text/csv
 8141
 "application/zip"
 7261
-http://www.iana.org/assignments/media-types/application/gzip	
+http://www.iana.org/assignments/media-types/application/gzip
 6184
 "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
 5647
@@ -57,15 +57,15 @@ http://www.iana.org/assignments/media-types/application/gzip
 4005
 "text/xml"
 3724
-http://www.iana.org/assignments/media-types/text/xml	
+http://www.iana.org/assignments/media-types/text/xml
 3658
 "pdf"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 3008
-https://www.iana.org/assignments/media-types/text/csv	
+https://www.iana.org/assignments/media-types/text/csv
 2358
-http://www.iana.org/assignments/media-types/application/zip	
+http://www.iana.org/assignments/media-types/application/zip
 2172
-https://www.iana.org/assignments/media-types/text/xml	
+https://www.iana.org/assignments/media-types/text/xml
 1977
 "image/jpeg"
 1976
@@ -99,7 +99,7 @@ https://www.iana.org/assignments/media-types/text/xml
 565
 "application/vnd.google-earth.kml+xml"
 544
-https://www.iana.org/assignments/media-types/image%2Ftiff	
+https://www.iana.org/assignments/media-types/image%2Ftiff
 490
 "shp"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 473
@@ -109,9 +109,9 @@ https://www.iana.org/assignments/media-types/image%2Ftiff
 460
 "ZIP"
 389
-https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet	
+https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 381
-http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet	
+http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 378
 "kml"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 356
@@ -123,13 +123,13 @@ http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-offic
 296
 "text/plain"
 255
-https://www.iana.org/assignments/media-types/application/gml+xml	
+https://www.iana.org/assignments/media-types/application/gml+xml
 228
-https://www.iana.org/assignments/media-types/application/geo+json	
+https://www.iana.org/assignments/media-types/application/geo+json
 227
-https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml	
+https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml
 226
-http://www.iana.org/assignments/media-types/application/vnd.geo+json	
+http://www.iana.org/assignments/media-types/application/vnd.geo+json
 221
 "zip (shp)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 177
@@ -137,11 +137,11 @@ http://www.iana.org/assignments/media-types/application/vnd.geo+json
 163
 "gpkg"
 160
-http://www.iana.org/assignments/media-types/application/pdf	
+http://www.iana.org/assignments/media-types/application/pdf
 157
 "dxf"
 157
-https://www.iana.org/assignments/media-types/application/json	
+https://www.iana.org/assignments/media-types/application/json
 156
 "SHP"
 151
@@ -151,7 +151,7 @@ https://www.iana.org/assignments/media-types/application/json
 143
 "xsd"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 143
-http://www.iana.org/assignments/media-types/application/xml	
+http://www.iana.org/assignments/media-types/application/xml
 133
 "geo json"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 122
@@ -163,9 +163,9 @@ http://www.iana.org/assignments/media-types/application/xml
 108
 "kmz"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 106
-https://www.iana.org/assignments/media-types/application/octet-stream+zip	
+https://www.iana.org/assignments/media-types/application/octet-stream+zip
 96
-http://www.iana.org/assignments/media-types/application/vnd.ms-excel	
+http://www.iana.org/assignments/media-types/application/vnd.ms-excel
 93
 "csv (comma-separated values)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 85
@@ -173,7 +173,7 @@ http://www.iana.org/assignments/media-types/application/vnd.ms-excel
 82
 "application/vnd.ogc.wms_xml"
 76
-http://www.iana.org/assignments/media-types/application/trig	
+http://www.iana.org/assignments/media-types/application/trig
 74
 "TIFF"
 71
@@ -195,7 +195,7 @@ http://www.iana.org/assignments/media-types/application/trig
 63
 "dwg/dxf"
 61
-http://www.iana.org/assignments/media-types/text/html	
+http://www.iana.org/assignments/media-types/text/html
 60
 "zip(shp)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 59
@@ -217,7 +217,7 @@ http://www.iana.org/assignments/media-types/text/html
 40
 "shp (shapefile)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 40
-http://www.iana.org/assignments/media-types/application/json	
+http://www.iana.org/assignments/media-types/application/json
 40
 "gml (geographic markup language)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 40
@@ -241,7 +241,7 @@ http://www.iana.org/assignments/media-types/application/json
 29
 "text/csv, text/csv"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 28
-http://www.iana.org/assignments/media-types/application/octet-stream	
+http://www.iana.org/assignments/media-types/application/octet-stream
 26
 "netcdf"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 26
@@ -253,15 +253,15 @@ http://www.iana.org/assignments/media-types/application/octet-stream
 23
 "OGC:WMTS"
 23
-http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml	
+http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml
 22
-http://www.iana.org/assignments/media-types/application/ld+json	
+http://www.iana.org/assignments/media-types/application/ld+json
 22
 "ascii-grid (arcinfo)"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 20
 "gtfs"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 20
-https://www.iana.org/assignments/media-types/image/tiff	
+https://www.iana.org/assignments/media-types/image/tiff
 20
 "Shape"
 19
@@ -279,7 +279,7 @@ https://www.iana.org/assignments/media-types/image/tiff
 17
 "jpeg"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 17
-http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml	
+http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml
 17
 "esri shapefile poligonale compresso"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 17
@@ -315,7 +315,7 @@ http://www.iana.org/assignments/media-types/application/vnd.openxmlformats-offic
 11
 "WCS"
 10
-http://www.iana.org/assignments/media-types/image/tiff	
+http://www.iana.org/assignments/media-types/image/tiff
 10
 "GeoTIFF"
 10
@@ -333,13 +333,13 @@ http://www.iana.org/assignments/media-types/image/tiff
 8
 "mdb"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 8
-https://www.iana.org/assignments/media-types/application%2Fpdf	
+https://www.iana.org/assignments/media-types/application%2Fpdf
 8
 "7z"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 8
 "esri shapefile puntuale compresso"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 7
-http://www.iana.org/assignments/media-types/text/turtle	
+http://www.iana.org/assignments/media-types/text/turtle
 7
 ".zip"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 7
@@ -347,7 +347,7 @@ http://www.iana.org/assignments/media-types/text/turtle
 7
 "XML"
 7
-https://www.iana.org/assignments/media-types/application%2Fxml	
+https://www.iana.org/assignments/media-types/application%2Fxml
 6
 "ESRI Geodatabase (.mdb)"
 6
@@ -361,7 +361,7 @@ https://www.iana.org/assignments/media-types/application%2Fxml
 6
 ".ods"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 5
-http://www.iana.org/assignments/media-types/application/vnd.oasis.opendocument.spreadsheet	
+http://www.iana.org/assignments/media-types/application/vnd.oasis.opendocument.spreadsheet
 5
 "shx"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 5
@@ -401,11 +401,11 @@ http://www.iana.org/assignments/media-types/application/vnd.oasis.opendocument.s
 4
 "kml/kmz"
 3
-https://www.iana.org/assignments/media-types/application/xml	
+https://www.iana.org/assignments/media-types/application/xml
 3
 "rss"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 3
-http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz	
+http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz
 3
 "zip, json, xml"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 3
@@ -435,7 +435,7 @@ http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz
 2
 "zip:shp"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 2
-http://www.iana.org/assignments/media-types/application/rdf+xml	
+http://www.iana.org/assignments/media-types/application/rdf+xml
 2
 "xds"^^<http://purl.org/dc/terms/MediaTypeOrExtent>
 2
