@@ -13,7 +13,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.NodeIterator;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.DCTerms;
@@ -26,10 +25,6 @@ import org.dice_research.opal.common.vocabulary.Opal;
  * @author Adrian Wilke
  */
 public class FormatCleaner {
-
-	// TODO: Should become a part of OPAL common
-	public static final String NS_OPAL_FORMAT = Opal.NS_OPAL + "format/";
-	public static final Resource OPAL_FORMAT = ResourceFactory.createResource(Opal.NS_OPAL + "Format");
 
 	public final static int EXT_MAX_LENGTH = 12;
 
@@ -87,8 +82,8 @@ public class FormatCleaner {
 			// Add formats to model
 
 			for (String format : allFormats) {
-				Resource formatResource = model.getResource(NS_OPAL_FORMAT + format);
-				model.add(formatResource, RDF.type, OPAL_FORMAT);
+				Resource formatResource = model.getResource(Opal.NS_OPAL_FORMAT + format);
+				model.add(formatResource, RDF.type, Opal.OPAL_FORMAT);
 				distribution.addProperty(DCTerms.format, formatResource);
 			}
 
@@ -117,7 +112,7 @@ public class FormatCleaner {
 	/**
 	 * Cleans any type of string.
 	 */
-	protected Set<String> cleanInput(String string) {
+	public Set<String> cleanInput(String string) {
 		Set<String> formats = new HashSet<>();
 
 		// Empty values

@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish;
+package org.dice_research.opal.catfish.manual;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,6 +14,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+import org.dice_research.opal.catfish.FormatCleaner;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,19 +44,19 @@ public class ManualFormatCleanerTest {
 
 	@Test
 	public void testPrint_edpFormats() throws Exception {
-		Assume.assumeTrue(true);
+		Assume.assumeTrue(false);
 		printResults(edpFormats.keySet(), "edpFormats");
 	}
 
 	@Test
 	public void testPrint_edpMediaTypes() throws Exception {
-		Assume.assumeTrue(true);
+		Assume.assumeTrue(false);
 		printResults(edpMediaTypes.keySet(), "edpMediaTypes");
 	}
 
 	@Test
 	public void testPrint_edpMediaTypesExt() throws Exception {
-		Assume.assumeTrue(true);
+		Assume.assumeTrue(false);
 		printResults(edpMediaTypesExt.keySet(), "edpMediaTypesExt");
 	}
 
