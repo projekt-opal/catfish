@@ -6,26 +6,26 @@ Data cleaning component.
 
 Add the following lines to your `pom.xml` configuration file:
 
-  <dependencies>
-    <dependency>
-      <groupId>org.dice-research.opal</groupId>
-      <artifactId>catfish</artifactId>
-      <version>[1,2)</version>
-    </dependency>
-  </dependencies>
-  
-  <repositories>
-    <repository>
-      <id>maven.aksw.internal</id>
-      <name>AKSW Repository</name>
-      <url>http://maven.aksw.org/archiva/repository/internal</url>
-    </repository>
-    <repository>
-      <id>maven.aksw.snapshots</id>
-      <name>AKSW Snapshot Repository</name>
-      <url>http://maven.aksw.org/archiva/repository/snapshots</url>
-    </repository>
-  </repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.dice-research.opal</groupId>
+			<artifactId>catfish</artifactId>
+			<version>[1,2)</version>
+		</dependency>
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>maven.aksw.internal</id>
+			<name>AKSW Repository</name>
+			<url>http://maven.aksw.org/archiva/repository/internal</url>
+		</repository>
+		<repository>
+			<id>maven.aksw.snapshots</id>
+			<name>AKSW Snapshot Repository</name>
+			<url>http://maven.aksw.org/archiva/repository/snapshots</url>
+		</repository>
+	</repositories>
 
 Available versions are listed at [maven.aksw.org](https://maven.aksw.org/archiva/#advancedsearch~internal/org.dice-research.opal~catfish~~~~~30).
 
