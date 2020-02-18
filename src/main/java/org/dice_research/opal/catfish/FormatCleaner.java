@@ -1,9 +1,14 @@
 package org.dice_research.opal.catfish;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -17,6 +22,8 @@ import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.dice_research.opal.common.vocabulary.Opal;
 
 /**
@@ -26,22 +33,34 @@ import org.dice_research.opal.common.vocabulary.Opal;
  */
 public class FormatCleaner {
 
+	private static final Logger LOGGER = LogManager.getLogger();
+
 	public final static int EXT_MAX_LENGTH = 12;
 
 	public final static String PREFIX_IANA_VENDOR = "vnd.";
+	public final static String RESOURCE_WHITELIST = "extensions-whiltelist.txt";
 
 	public final static Pattern PATTERN_FINAL = Pattern
 			.compile("[a-zA-Z][a-zA-Z0-9+-]{2," + (EXT_MAX_LENGTH - 1) + "}");
 	public final static Pattern PATTERN_ZIP = Pattern.compile("^zip[ ]*\\(([a-zA-Z0-9+]{2,5})\\)");
 	public final static Pattern PATTERN_BRACKET = Pattern
 			.compile("^([a-zA-Z0-9+]{2,12})[ ]+\\(([\\.]*[a-zA-Z0-9+]{2,12})\\)");
+	public final static Pattern PATTERN_EXTENSION = Pattern.compile("^[a-z][a-z0-9]{1," + (EXT_MAX_LENGTH - 1) + "}");
 
 	public final static List<String> IANA_MIMETYPES;
+	public final static List<String> EXTENSIONS_WHILTELIST;
 
 	static {
 		String[] mimeTypes = { "application", "audio", "font", "example", "image", "message", "model", "multipart",
 				"text", "video" };
 		IANA_MIMETYPES = Arrays.asList(mimeTypes);
+
+		EXTENSIONS_WHILTELIST = new LinkedList<>();
+		try {
+			EXTENSIONS_WHILTELIST.addAll(readExtensionsWhitelist());
+		} catch (IOException e) {
+			LOGGER.error(e);
+		}
 	}
 
 	public void clean(Model model, Resource dataset) {
@@ -76,6 +95,21 @@ public class FormatCleaner {
 				RDFNode format = nodeIterator.next();
 				for (String value : getValues(format, true)) {
 					allFormats.addAll(cleanInput(value));
+				}
+			}
+
+			// Download URL
+
+			if (allFormats.isEmpty()) {
+				nodeIterator = model.listObjectsOfProperty(distribution, DCAT.downloadURL);
+				while (nodeIterator.hasNext()) {
+					RDFNode downloadUrl = nodeIterator.next();
+					for (String value : getValues(downloadUrl, true)) {
+						String cleanedUrl = cleanDownloadUrl(value);
+						if (cleanedUrl != null) {
+							allFormats.add(cleanDownloadUrl(value));
+						}
+					}
 				}
 			}
 
@@ -244,5 +278,47 @@ public class FormatCleaner {
 		if (PATTERN_FINAL.matcher(value).matches()) {
 			formats.add(value);
 		}
+	}
+
+	/**
+	 * Checks URL for format type.
+	 * 
+	 * @return extracted format type or null
+	 */
+	public String cleanDownloadUrl(String urlString) {
+
+		URL url;
+		try {
+			url = new URL(urlString);
+		} catch (MalformedURLException e) {
+			return null;
+		}
+
+		int index = url.getPath().lastIndexOf('.');
+		if (index != -1) {
+			Matcher matcher = PATTERN_EXTENSION.matcher(url.getPath().toLowerCase().substring(index + 1));
+			if (matcher.matches()) {
+				String extension = matcher.group();
+				if (EXTENSIONS_WHILTELIST.contains(extension)) {
+					return extension;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	protected static List<String> readExtensionsWhitelist() throws IOException {
+		List<String> list = new LinkedList<>();
+		InputStream inputStream = FormatCleaner.class.getClassLoader().getResourceAsStream(RESOURCE_WHITELIST);
+		try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
+			String line = bufferedReader.readLine();
+			while (line != null) {
+				list.add(line);
+				line = bufferedReader.readLine();
+			}
+			bufferedReader.close();
+		}
+		return list;
 	}
 }

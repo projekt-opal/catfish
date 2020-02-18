@@ -1,0 +1,30 @@
+# https://www.europeandataportal.eu/sparql
+#
+# PREFIX dcat: <http://www.w3.org/ns/dcat#>
+# PREFIX dct: <http://purl.org/dc/terms/>
+# SELECT DISTINCT ?downloadURL
+# WHERE {
+#     ?dataset a dcat:Dataset .
+#     ?dataset dcat:distribution ?distribution .
+#     ?distribution dcat:downloadURL ?downloadURL .
+# }
+# LIMIT 1000
+# OFFSET 0
+#
+# 2020-02-18
+#
+# Manual
+http://example.org/
+http://example.org/.
+http://example.org/test.pdf
+http://example.org/test.pdf?download
+http://example.org/download.php?go
+http://example.org/?download
+# Extracted
+https://geo.sv.rostock.de/download/opendata/sanierungsgebiete/sanierungsgebiete.gml
+http://ckan.sig.cm-agueda.pt/dataset/47d33946-bcbd-4ed9-8a89-c33838873d8c/resource/33d4fc62-f149-4cd9-8383-4332f9be62ba/download/farmacias2018.gpkg
+https://transparencia.sns.gov.pt/explore/dataset/01_sica_evolucao-mensal-das-consultas-medicas-hospitalares/download?format=csv&timezone=Europe/Berlin&use_labels_for_header=true
+https://www.data.gov.cy/sites/default/files/%CE%92%CE%BF%CF%85%CE%BB%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CE%AD%CF%82%202001%20-%20results.txt
+http://hotell.difi.no/download/stavanger/investeringsbudsjett2016?download
+http://hotell.difi.no/download/brreg/frivillighetsregisteret?download
+https://www.matportalen.no/verktoy/matvaretabellen/article45192.ece/BINARY/Matvaretabellen%202019%20(ods)

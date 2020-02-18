@@ -4,10 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -26,20 +29,33 @@ import org.junit.Test;
  */
 public class ManualFormatCleanerTest {
 
+	public final static List<String> EXTENSIONS_BLACKLIST;
+
+	static {
+		String[] extensions = { "asp", "aspx", "cgi", "dll", "htm", "html", "jsp", "jspx", "php", "php3", "php4",
+				"phtml", "pl", "py", "rb", "rhtml", "shtml", "xhtml", "xhtml", "download", "dl", "query", "get", "post",
+				"form", "api", "diverse", "document", "htlm", "html5", "multi", "multiformat", "sparql", "www", "ashx",
+				"search" };
+		EXTENSIONS_BLACKLIST = Arrays.asList(extensions);
+	}
+
 	File directory = new File("src/test/resources/org/dice_research/opal/catfish");
 	File fileEdpFormats = new File(directory, "edp-formats.txt");
 	File fileEdpmediaTypes = new File(directory, "edp-mediaTypes.txt");
 	File fileEdpmediaTypesExt = new File(directory, "edp-mediaTypesExt.txt");
+	File fileDownloasUrls = new File(directory, "edp-downloasUrls.txt");
 
 	Map<String, Integer> edpFormats;
 	Map<String, Integer> edpMediaTypes;
 	Map<String, Integer> edpMediaTypesExt;
+	List<String> edpDownloadUrls;
 
 	@Before
 	public void setUp() throws Exception {
 		edpFormats = read(fileEdpFormats);
 		edpMediaTypes = read(fileEdpmediaTypes);
 		edpMediaTypesExt = read(fileEdpmediaTypesExt);
+		edpDownloadUrls = readUrls(fileDownloasUrls);
 	}
 
 	@Test
@@ -58,6 +74,62 @@ public class ManualFormatCleanerTest {
 	public void testPrint_edpMediaTypesExt() throws Exception {
 		Assume.assumeTrue(false);
 		printResults(edpMediaTypesExt.keySet(), "edpMediaTypesExt");
+	}
+
+	@Test
+	public void testPrintExtensionWhitelist() throws Exception {
+		Assume.assumeTrue(false);
+		Set<String> whitelist = new TreeSet<>();
+		for (String string : edpFormats.keySet()) {
+			whitelist.addAll(new FormatCleaner().cleanInput(string));
+		}
+		for (String string : edpMediaTypes.keySet()) {
+			whitelist.addAll(new FormatCleaner().cleanInput(string));
+		}
+		for (String string : edpMediaTypesExt.keySet()) {
+			whitelist.addAll(new FormatCleaner().cleanInput(string));
+		}
+		whitelist.removeAll(EXTENSIONS_BLACKLIST);
+		StringBuilder stringBuilder = new StringBuilder();
+		for (String string : whitelist) {
+			stringBuilder.append(string);
+			stringBuilder.append(System.lineSeparator());
+		}
+		System.out.println(stringBuilder);
+	}
+
+	@Test
+	public void testPrint_edpDownloadUrls() throws Exception {
+		Assume.assumeTrue(false);
+		Set<String> extensions = new TreeSet<>();
+		Set<String> in = new TreeSet<>();
+		Set<String> ex = new TreeSet<>();
+		for (String url : edpDownloadUrls) {
+			String cleaned = new FormatCleaner().cleanDownloadUrl(url);
+			if (cleaned == null) {
+				ex.add(url);
+			} else {
+				in.add(url);
+				extensions.add(cleaned);
+			}
+		}
+
+		StringBuilder stringBuilder = new StringBuilder();
+		for (String string : extensions) {
+			stringBuilder.append(string);
+			stringBuilder.append(System.lineSeparator());
+		}
+		stringBuilder.append(System.lineSeparator());
+		for (String string : in) {
+			stringBuilder.append(string);
+			stringBuilder.append(System.lineSeparator());
+		}
+		stringBuilder.append(System.lineSeparator());
+		for (String string : ex) {
+			stringBuilder.append(string);
+			stringBuilder.append(System.lineSeparator());
+		}
+		System.out.println(stringBuilder);
 	}
 
 	public void printResults(Collection<String> values, String title) throws Exception {
@@ -98,6 +170,23 @@ public class ManualFormatCleanerTest {
 			bufferedReader.close();
 		}
 		return sortByValue(map);
+	}
+
+	protected List<String> readUrls(File file) throws IOException {
+		List<String> list = new LinkedList<>();
+		try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+			String line = bufferedReader.readLine();
+			while (line != null) {
+				if (line.startsWith("#")) {
+					// Comment: Just read next line below
+				} else {
+					list.add(line);
+				}
+				line = bufferedReader.readLine();
+			}
+			bufferedReader.close();
+		}
+		return list;
 	}
 
 	protected String toLiteral(String string) {

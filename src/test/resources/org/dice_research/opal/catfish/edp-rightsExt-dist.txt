@@ -1,0 +1,783 @@
+# https://www.europeandataportal.eu/sparql
+#
+# PREFIX dcat: <http://www.w3.org/ns/dcat#>
+# PREFIX dct: <http://purl.org/dc/terms/>
+# SELECT DISTINCT ?rightsExt (COUNT(DISTINCT ?distribution) as ?count)
+# WHERE {
+#     ?distribution a dcat:Distribution .
+#     ?distribution dct:rights ?rights .
+#     ?rights ?p ?rightsExt
+# }
+# GROUP BY ?rightsExt
+# ORDER BY DESC(?count)
+#
+# 2020-02-18
+#
+# Count > 50
+#
+# rightsExt
+# count
+#
+http://purl.org/dc/terms/RightsStatement	
+183622
+"otherRestrictions"
+146272
+"Pas de restriction d'accès public selon INSPIRE"@fr
+48376
+"copyright"
+22389
+"license"
+12997
+"Wenn Sie Informationen bzgl. vorhandener Zugriffsbeschränkungen brauchen, wenden Sie sich bitte an die angegebene Kontaktstelle."@de
+8872
+"intellectualPropertyRights"
+7062
+"no constraints"@de
+6161
+"{"id":"dl-de-by-2.0","name":"Datenlizenz Deutschland - Namensnennung - Version 2.0","url":"https://www.govdata.de/dl-de/by-2-0","quelle":"Quelle: © GeoBasis-DE/LGB, dl-de/by-2-0"}"@de
+5739
+"Directive 2007/2/CE (INSPIRE), Pas de restriction d'accès public"@fr
+3509
+"Pas de restriction d’accès public"@fr
+3030
+"Es gelten keine Bedingungen"@de
+2904
+"restricted"
+2724
+"Es gelten keine Zugriffsbeschränkungen"@de
+2689
+"brak ograniczeń"@pl
+2493
+"['no limitations', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+2408
+"['Creative Commons licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+2229
+""@de
+2154
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Gemeinde eingesehen werden können."@de
+2151
+"Zugriffsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Gemeinde eingesehen werden können."@de
+2151
+"['Creative Commons licence conditions apply', 'http://creativecommons.org/licenses/by/4.0/', 'license', 'http://creativecommons.org/licenses/by/4.0/', 'license']"
+2102
+"kostenfreie Nutzung der Daten ist nur für interne Zwecke erlaubt."@de
+1864
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+1824
+"Creative Commons Reconocimiento 4.0 (CC BY 4.0)"@es
+1779
+"Pas de restriction d'accès public"@fr
+1643
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply', '"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"\nRights (can)\n\nShare- copy and redistribute the data in any medium or format\n\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\n\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\n\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license', '"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"\nRights (can)\n\nShare- copy and redistribute the data in any medium or format\n\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\n\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\n\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license']"
+1589
+"['Consult license for use limitations', 'otherRestrictions', 'otherRestrictions']"
+1542
+"keine"@de
+1392
+http://purl.org/dc/terms/LicenseDocument	
+1342
+"['Creative Commons license conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+1324
+"Baugesetzbuch (BauGB)"@de
+1213
+"['Creative Commons licence conditions limitations', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+1208
+"Baunutzungsverordnung (BauNVO)"@de
+1208
+"['Creative Commons Licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+1123
+"Altri%20vincoli"
+1098
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence', 'Data that is produced directly by the Geological Survey Ireland (GSI) is free for use under the conditions of Creative Commons Attribution 4.0 International license. https://creativecommons.org/licenses/by/4.0/legalcode\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application. \nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license', 'Data that is produced directly by the Geological Survey Ireland (GSI) is free for use under the conditions of Creative Commons Attribution 4.0 International license. https://creativecommons.org/licenses/by/4.0/legalcode\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application. \nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license']"
+1094
+"No readable limitations are given - the serviceprovider have to be contacted and asked!"@de
+1048
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence', 'https://creativecommons.org/licenses/by/4.0/\n\nRights (can)\nShare- copy and redistribute the data in any medium or format\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license', 'https://creativecommons.org/licenses/by/4.0/\n\nRights (can)\nShare- copy and redistribute the data in any medium or format\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license']"
+1021
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Aar-Einrich bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Aar-Einrich eingesehen werden können."@de
+985
+"Pas de restriction d’accès public selon INSPIRE"@fr
+958
+"The Report is valid on date of production but underlying data changes can occur after and change the reported figures. HSE PCRS is committed to maximising transparency through reporting the information which various stakeholders require as and when they require it. This can include reporting on the same figures from different perspectives, at different points in time to various stakeholders. In some circumstances this can result in a minor discrepancy between reports for legitimate reasons of timing and data changes etc. To ensure the dynamic nature of our business does not impede our ability to meet the reporting needs of our various stakeholders, PCRS reserve the right to amend a published figure in the event that any discrepancy may arise.  "
+932
+"Report Validity Disclaimer: 
+The Report is valid on date of production but underlying data changes can occur after and change the reported figures. HSE PCRS is committed to maximising transparency through reporting the information which various stakeholders require as and when they require it. This can include reporting on the same figures from different perspectives, at different points in time to various stakeholders. In some circumstances this can result in a minor discrepancy between reports for legitimate reasons of timing and data changes etc. To ensure the dynamic nature of our business does not impede our ability to meet the reporting needs of our various stakeholders, PCRS reserve the right to amend a published figure in the event that any discrepancy may arise."
+927
+"Report Validity Disclaimer:
+The Report is valid on date of production but underlying data changes can occur after and change the reported figures. HSE PCRS is committed to maximising transparency through reporting the information which various stakeholders require as and when they require it. This can include reporting on the same figures from different perspectives, at different points in time to various stakeholders. In some circumstances this can result in a minor discrepancy between reports for legitimate reasons of timing and data changes etc. To ensure the dynamic nature of our business does not impede our ability to meet the reporting needs of our various stakeholders, PCRS reserve the right to amend a published figure in the event that any discrepancy may arise."
+873
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Bad Ems - Nassau bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Bad Ems - Nassau eingesehen werden können."@de
+855
+"['Creative Commons Licence Conditions Apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+827
+"Nutzungsbedingungen: Es gelten die Nutzungsbestimmungen der digitalen Geodatenauskunft der Stadt Freiburg (FreiGIS): https://stadtplan.freiburg.de/help/index.php?section=kap_nutzung"@de
+824
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+822
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Diez bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Diez eingesehen werden können."@de
+799
+"Nutzungsbedingungen: Alle Nutzungsarten sind frei, aber grundsätzlich wird nicht auf das Urheberrecht verzichtet."@de
+780
+"Das Anschauen ("Viewing") in der Online-Anwendung des Geoportal.rlp ist kostenfrei. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Alzey-Land bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Alzey-Land eingesehen werden können. Bitte nehmen Sie dazu Kontakt mit dem Fachbereich II -Bauen und Umwelt- Herrn Baro oder Frau Rüttiger, Verbandsgemeindeverwaltung Alzey-Land auf (06731 409 211 oder -213 oder E-Mail: baro.axel@alzey-land.de/ ruettiger.heike@alzey-land.de)."@de
+764
+"no limitations"@de
+712
+"Dato pubblico"@it
+705
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Nastätten bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Nastätten eingesehen werden können."@de
+679
+"opendata_dl_de_by_2"
+571
+"Nutzungsbedingungen WICHTIGE HINWEISE:  Bei der Veröffentlichung der Bauleitpläne der Verbandsgemeinde Bernkastel-Kues im geoportal.rlp handelt es sich um ein unverbindliches, zusätzliches Informationsangebot (SEKUNDÄRDATEN) der Verbandsgemeindeverwaltung Bernkastel-Kues.  Für die Richtigkeit, Aktualität und Vollständigkeit der Inhalte wird von der Verbandsgemeinde Bernkastel-Kues keine Haftung oder Gewährleistung übernommen. Die Verbandsgemeinde haftet nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen.  Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke mit Quellenangabe. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Verbandsgemeinde Bernkastel-Kues.  Rechtlich verbindlich sind ausschließlich die originalen Bebauungspläne, die im Gebäude der Verbandsgemeindeverwaltung eingesehen werden können. Es wird daher ausdrücklich empfohlen, vor Entscheidungen und insbesondere vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen."@de
+537
+"['no limitations', 'no limitations', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+526
+"['Creative Commons Attribution-NonCommercial-NoDerivs Licence conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+507
+"brak"@pl
+493
+"Die Bereitstellung der Daten zu den Bebauungsplänen der Verbandsgemeinde Flammersfeld ist eine unverbindliche Serviceleistung. Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Flammersfeld. Die Nutzung der Daten aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Flammersfeld ist ausdrücklich ausgeschlossen. Sofern Sie keine schriftliche Einwilligung der Verbandsgemeinde Flammersfeld haben, dürfen Sie den Inhalt weder abändern noch abgeleitete Werke daraus erstellen, die Inhalte nicht weiterverbreiten, veröffentlichen, verkaufen oder auf andere Weise für Dritte zugänglich machen. Das Anschauen ("Viewing") in der Online-Anwendung GeoPortal.rlp ist kostenfrei. Die Verbandsgemeinde Flammersfeld lehnt jegliche Haftung oder Gewährleistung auf die Richtigkeit/Genauigkeit und Vollständigkeit der Daten und Inhalte sowie die dauerhafte Verfügbarkeit der Serviceleistung ab. Die Verbandsgemeinde Flammersfeld haftet nicht für Schäden, welche durch die direkte oder indirekte Nutzung entstehen. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne mit ihren Festsetzungen, die in den Räumen der Verbandsgemeinde Flammersfeld, Fachbereich 3H, Rheinstraße 17, 57632 Flammersfeld, eingesehen werden können. Telefonische Rückfragen zu den Bebauungsplänen können unter den Telefonnummern 02685/809-0 gestellt werden."@de
+485
+"Nutzungsbedingungen: Das von der Hanse- und Universitätsstadt Rostock hier angebotene und in ihrem Eigentum befindliche Werk unterliegt der gemeinfreien Lizenz Creative Commons 1.0 Universell Public Domain Dedication (CC0 1.0; URL: https://creativecommons.org/publicdomain/zero/1.0/deed.de). Damit ist alles gestattet, ohne um weitere Erlaubnis bitten zu müssen. Es gelten folgende Regelungen zu Gewährleistung und Haftung: https://geo.sv.rostock.de/haftung-fuer-angebotene-inhalte.html"@de
+484
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by the Department of Culture, Heritage, and the Gaeltacht using Open Data from the Central Statistics Office and Ordnance Survey Ireland.\n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by the Department of Culture, Heritage, and the Gaeltacht using Open Data from the Central Statistics Office and Ordnance Survey Ireland.\n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+469
+"['Data is for public use under Creative Commons CC-By 4.0', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+460
+"Bei der Veröffentlichung der Bauleitpläne im Bereich der Verbandsgemeinde Altenahr im GeoPortal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeindeverwaltung Altenahr. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Verbandsgemeinde Altenahr einschließlich ihrer verbandsangehörigen Ortsgemeinden keine Haftung oder Gewährleistung übernommen. Die Verbandsgemeinde Altenahr einschließlich ihrer verbandsangehörigen Ortsgemeinden haften nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen. Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Verbandsgemeinde Altenahr. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne, die in den Räumen der Verbandsgemeindeverwaltung Altenahr, Roßberg 3, 53505 Altenahr, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Bauabteilung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+454
+"Nutzungsbedingungen    WICHTIGE HINWEISE: Bei der Veröffentlichung der Bauleitpläne der Stadt Bad Neuenahr-Ahrweiler im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Stadtverwaltung Bad Neuenahr-Ahrweiler. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Stadt Bad Neuenahr-Ahrweiler keine Haftung oder Gewährleistung übernommen wird. Die Stadt haftet nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen.  Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Stadt Bad Neuenahr-Ahrweiler. Rechtlich verbindlich sind ausschließlich die original Bebauungspläne, die in den Räumen der Stadtverwaltung Bad Neuenahr-Ahrweiler, Rathausstraße 116, 53474 Bad Neuenahr-Ahrweiler, eingesehen werden können.  Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Abteilung Stadtplanung, Sachbereich Bauleitplanung, während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+450
+"Hamburgisches Geodateninfrastrukturgesetz (HmbGDIG)"@de
+445
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Kelberg bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit der Bauabteilung der Verbandsgemeindeverwaltung Kelberg auf (Tel: 02692/872-24 oder E-Mail Willi.Schmitz@vgv-kelberg.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Kelberg bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Kelberg eingesehen werden können."@de
+420
+"Die Bereitstellung der Daten zu den Bebauungsplänen der Verbandsgemeinde Altenkirchen (Westerwald) ist eine unverbindliche Serviceleistung. Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Altenkirchen (Westerwald). Die Nutzung der Daten aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Altenkirchen (Westerwald) ist ausdrücklich ausgeschlossen. Sofern Sie keine schriftliche Einwilligung der Verbandsgemeinde Altenkirchen (Westerwald) haben, dürfen Sie den Inhalt weder abändern noch abgeleitete Werke daraus erstellen, die Inhalte nicht weiterverbreiten, veröffentlichen, verkaufen oder auf andere Weise für Dritte zugänglich machen. Das Anschauen ("Viewing") in der Online-Anwendung GeoPortal.rlp ist kostenfrei. Die Verbandsgemeinde Altenkirchen (Westerwald) lehnt jegliche Haftung oder Gewährleistung auf die Richtigkeit/Genauigkeit und Vollständigkeit der Daten und Inhalte sowie die dauerhafte Verfügbarkeit der Serviceleistung ab. Die Verbandsgemeinde Altenkirchen (Westerwald) haftet nicht für Schäden, welche durch die direkte oder indirekte Nutzung entstehen. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne mit ihren Festsetzungen, die in den Räumen der Verbandsgemeinde Altenkirchen (Westerwald), Fachbereich Infrastruktur, Umwelt und Bauen, Rathausstraße 13, 57610 Altenkirchen, eingesehen werden können. Telefonische Rückfragen zu den Bebauungsplänen können unter den Telefonnummern 02681/85-0 gestellt werden."@de
+417
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Rhein-Mosel bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Zelter, Verbandsgemeindeverwaltung Rhein-Mosel auf (Tel: 02607/49-41 oder E-Mail: ZelterK@vgrm.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Rhein-Mosel bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundär-datenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Rhein-Mosel eingesehen werden können."@de
+405
+"keine Zugriffsbeschränkungen"@de
+399
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply', '"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"', 'license', '"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"', 'license']"
+393
+"Saemtliche Rechte an diesem Dienst liegen bei der Kreisstadt Merzig."@de
+389
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Kirchberg. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Kirchberg ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Kirchberg eingesehen werden können."@de
+389
+"['https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+388
+"# Met Éireann Creative Commons Attribution Licence Notice
+
+## Terms and Conditions: 
+
+* Met Éireann retains Intellectual Property Rights and copyright over our data. 
+* Met Éireann must be acknowledged (attributed) as the source. 
+* Met Éireann does not accept any liability whatsoever for any error or omission in the data, their availability, or for any loss or damage arising from their use.
+* Users must remove attribution if requested by Met Éireann.
+
+## Licence
+This data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0). To view a copy of this licence, visit https://creativecommons.org/licenses/by/4.0/ 
+ 
+## Summary 
+You are free to:
+* Share — copy and redistribute the material in any medium or format 
+* Adapt — remix, transform, and build upon the material for any purpose, even commercially. 
+
+Under the following terms:
+* You must give appropriate credit (attribution) to Met Éireann as outlined below, provide a link to the licence, and indicate if changes were made. 
+* No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits.
+
+## Attribution
+Met Éireann data and its derivatives must be accredited with the following 5 statements.
+1. Copyright statement: Copyright Met Éireann
+2. Source www.met.ie
+3. Licence Statement: This data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/
+4. Disclaimer: Met Éireann does not accept any liability whatsoever for any error or omission in the data, their availability, or for any loss or damage arising from their use.
+5. Where applicable, an indication if the  material has been modified and an indication of previous modifications
+
+### For Example
+* Copyright Met Éireann
+* Source www.met.ie
+* This data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/
+* Met Éireann does not accept any liability whatsoever for any error or omission in the data, their availability, or for any loss or damage arising from their use.
+* This material has been modified from the original."
+387
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Simmern. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Simmern ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Simmern eingesehen werden können."@de
+382
+"Die Richtigkeit der Daten wurde geprüft, aber wir müssen aus rechtlichen Gründen darauf hinweisen, dass verbindliche Auskünfte nur direkt bei der Verbandsgemeindeverwaltung Jockgrim erteilt werden."@de
+381
+"Este servicio se puede usar de modo libre y gratuito siempre que se mencione a los autores y propietarios de la información"@es
+380
+"{"id":"dl-de-by-2.0","name":"Datenlizenz Deutschland - Namensnennung - Version 2.0","url":"https://www.govdata.de/dl-de/by-2-0","quelle":"Quelle: © Staatsbibliothek zu Berlin – Preußischer Kulturbesitz, dl-de/by-2-0"}"@de
+374
+"Im Rahmen der Umsetzung der eGovernment-Initiative des Landes Rheinland-Pfalz wurde der Aufbau einer Geodateninfrastruktur beschlossen, welche Pläne mit räumlichen Geltungsbereichen (Bebauungspläne, Flächennutzungspläne, Grünordnungspläne) der Öffentlichkeit über eine Internetplattform bereitstellt. Die Datensätze zu den rechtsverbindlichen Bebauungsplänen im Bereich der Gemeinde Grafschaft wurden entsprechend aufbereitet und in das „GeoPortal“ eingepflegt.  Somit sind die Voraussetzungen für einen Zugriff auf die Bebauungsplandaten der Gemeinde Grafschaft über das „GeoPortal“ des Landes geschaffen.  Den Bürgern bieten sich außerdem weitere Verknüpfungsmöglichkeiten mit anderen Daten wie Luftbild, Katasterkarte oder Bodenrichtwerte.  Die Nutzung der Daten wird über folgende Nutzungsbedingungen geregelt.   Nutzungsbedingungen: Bei der Veröffentlichung der Bauleitpläne im Bereich der Gemeinde Grafschaft im GeoPortal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Gemeinde Grafschaft. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Gemeinde Grafschaft einschließlich ihrer angehörigen Ortsgemeinden keine Haftung oder Gewährleistung übernommen. Die Gemeinde Grafschaft einschließlich ihrer angehörigen Ortsgemeinden haften nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen.  Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Gemeindeverwaltung Grafschaft. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne, die in den Räumen der Gemeindeverwaltung Grafschaft, Ahrtalstraße 5, 53501 Grafschaft, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen.  Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen.  Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen des Fachbereiches 2 Natürliche Lebensgrundlagen und Bauen während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung. Die grundsätzliche Nutzung der zur Verfügung stehenden Kartendienste des Geoprotals ist über die „Datenlizenz Deutschland-Namensnennung – 2.0“ geregelt."@de
+364
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Loreley bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Loreley eingesehen werden können."@de
+363
+"Sin limitaciones"@es
+361
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Daun bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit der Bauabteilung der Verbandsgemeindeverwaltung Daun auf (Tel: 06592/939-314 oder E-Mail daniela.wagner@vgv.daun.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Daun bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Daun eingesehen werden können."@de
+355
+"WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne der Ortsgemeinden und der Verbandsgemeinde Vordereifel  im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeinde Vordereifel, für dessen RICHTIGKEIT und AKTUALITÄT von der Verbandsgemeinde Vordereifel KEINE GEWÄHRLEISTUNG übernommen wird. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. durch eine Bauvoranfrage) bei der Verbandsgemeinde Vordereifel  einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen des Bauamtes der Bauverwaltung der Verbandsgemeinde Vordereifel während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung bereit.""@de
+353
+"Hiermit weisen wir Sie darauf hin, dass alle Bebauungspläne, textlichen Festsetzungen und sonstige hinterlegten Angaben nur als grober Richtwert dienen sollen und kleinere Abweichungen möglich sein können. Sollten Sie die Originalpläne einsehen wollen, bitten wir Sie, sich an die Verbandsgemeindeverwaltung Cochem zu wenden!"@de
+342
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Emmelshausen. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Emmelshausen ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Emmelshausen eingesehen werden können."@de
+336
+"Nutzungsbedingungen Beschränkungen des öffentlichen Zugangs Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Pellenz bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit der Verbandsgemeindeverwaltung Pellenz auf (Tel: 02632/299-212 oder E-Mail: bauverwaltung@pellenz.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Pellenz bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundär-datenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Pellenz eingesehen werden können."@de
+332
+"Aucun obstacle technique"@fr
+330
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence', 'https://creativecommons.org/licenses/by/4.0/\n\nRights (can)\n\nShare- copy and redistribute the data in any medium or format\n\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\n\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\n\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license', 'https://creativecommons.org/licenses/by/4.0/\n\nRights (can)\n\nShare- copy and redistribute the data in any medium or format\n\nAdapt- remix, transform, and build upon the material for any purpose, even commercially\n\nRequirements (must)\n\nAttribution- Give appropriate credit, provide a link to the licence, and indicate if changes were made. Do so in any reasonable manner, but not in any way that suggests the license endorses you or your use\n\nNo additional restrictions - may not apply legal terms or technological measures that legally restrict others from doing anything the license permits\n\nUnder the CC-BY Licence, users must acknowledge the source of the Information in their product or application.\n\nPlease use this specific attribution statement: "Contains Irish Public Sector Data (Geological Survey) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence".', 'license']"
+329
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Voelklingen."@de
+322
+""WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne der Stadt Andernach im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Stadtverwaltung Andernach, für dessen RICHTIGKEIT und AKTUALITÄT von der Stadt Andernach KEINE GEWÄHRLEISTUNG übernommen wird. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen.   Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumassnahme bzw. Nutzung (z.B. durch eine BAUVORANFRAGE ) bei der Stadtverwaltung Andernach einzuholen.   Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen des Amtes für Stadtplanung und Bauverwaltung der Stadt Andernach während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung bereit.""@de
+320
+"['Creative Common Licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+319
+"Inga tillämpliga villkor"@sv
+316
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Heusweiler."@de
+313
+"['Creative Commons Non Commercial No Derivatives licence  conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+305
+"Die Ansicht der Daten ist kostenlos und unverbindlich. Für ausführliche Informationen wenden Sie sich bitte and die Verbandsgemeinde Südeifel."@de
+304
+"['Creative Commons licence conditions apply', u'https://creativecommons.org/licenses/by/4.0/\n\nThe parties are:\nOrdnance Survey Ireland (OSi), a statutory company with its head office at Phoenix Park, Dublin 8, Ireland (?we? ?our? ?us?); and The Licensee, the individual, user or organisation downloading the OSi data (?you? ?your?) \n\nThe term is:\nThis Agreement shall commence upon the Licensees discovery or download of the Data and shall continue in perpetuity or until further notice by us.\n\nOwnership:\nThe Government of Ireland and Ordnance Survey Ireland (OSi) have intellectual property rights in the OSi Data. All OSi Data licensed to you under this Agreement remains the property of the Government of Ireland.\n\nGrant of licence:\nUnder this Agreement we grant you a non-exclusive, non-transferable licence for the term of this Agreement to:\nUse, reproduce, adapt and distribute the OSi Data, and combine the OSi Data with any other records or data held by you, solely for non-profit, charity, research and development, community, personal or academic / educational use.\nIf you want to exploit the OSi Data commercially for use in your own commercial publications, you must obtain the appropriate copyright licence from Ordnance Survey Ireland. Information at: http://www.osi.ie/Services/Copyright.aspx\nIf you want to reproduce the OSi Data for use in your own non-commercial publications, you must obtain the appropriate copyright licence from Ordnance Survey Ireland. Information at: http://www.osi.ie/Services/Copyright.aspx\n \nYou have no rights in the use of the OSi Data other than those expressly set out in this Agreement. In particular, this Agreement does not allow you to:\n\nSell, give away, trade, let or hire the OSi Data\nExploit the OSi Data commercial without first seeking permission or notifying OSi or\nMisrepresent the data or its source.\n\nObligations on you:\nYou will ensure that you observe the restrictions on the use of the OSi Data set out in this Agreement\nYou will ensure that you fully protect the intellectual property rights in the OSi Data, and that you protect and do not interfere with our trade names and trade marks \nYou will not use the OSi Data, or allow it to be used by others, in any manner which we reasonably feel is inconsistent with the goodwill in our name\nYou must always acknowledge the copyright and the source of the data by including the following attribution statement: Contains Ordnance Survey Ireland data \xa9 OSi 2012.\n\nExpiry:\nIn the event of expiry of this Agreement you will immediately cease the use of the OSi Data which you hold or for which you are responsible.\n\nLiability / Warranty:\nYou are using a generalised, fit for purpose, non-maintained dataset; for access to and use of the definitive dataset contact OSi at www.osi.ie.\nIt is your responsibility to ensure that OSi Data is suitable for your intended purposes and we accept no liability as to the fitness of OSi Data supplied in meeting your needs. \nWe exclude to the fullest extent permissible by law all warranties, conditions or terms that may be implied by statute, statutory instrument, common law, custom or otherwise. \nWe shall not be under any liability of any sort or liable for any damage, injury or loss whatsoever, whether in tort (including negligence) or otherwise, other than liability for breach of this Agreement.\nWe shall not under any circumstances whatsoever be liable for any special, incidental, indirect or consequential damages including damages or costs incurred as a result of loss of time, loss of savings, loss of data or loss of profits.\n\nGoverning Law:\nThis Agreement will be governed by and construed in accordance with the laws of Ireland.', 'license', u'https://creativecommons.org/licenses/by/4.0/\n\nThe parties are:\nOrdnance Survey Ireland (OSi), a statutory company with its head office at Phoenix Park, Dublin 8, Ireland (?we? ?our? ?us?); and The Licensee, the individual, user or organisation downloading the OSi data (?you? ?your?) \n\nThe term is:\nThis Agreement shall commence upon the Licensees discovery or download of the Data and shall continue in perpetuity or until further notice by us.\n\nOwnership:\nThe Government of Ireland and Ordnance Survey Ireland (OSi) have intellectual property rights in the OSi Data. All OSi Data licensed to you under this Agreement remains the property of the Government of Ireland.\n\nGrant of licence:\nUnder this Agreement we grant you a non-exclusive, non-transferable licence for the term of this Agreement to:\nUse, reproduce, adapt and distribute the OSi Data, and combine the OSi Data with any other records or data held by you, solely for non-profit, charity, research and development, community, personal or academic / educational use.\nIf you want to exploit the OSi Data commercially for use in your own commercial publications, you must obtain the appropriate copyright licence from Ordnance Survey Ireland. Information at: http://www.osi.ie/Services/Copyright.aspx\nIf you want to reproduce the OSi Data for use in your own non-commercial publications, you must obtain the appropriate copyright licence from Ordnance Survey Ireland. Information at: http://www.osi.ie/Services/Copyright.aspx\n \nYou have no rights in the use of the OSi Data other than those expressly set out in this Agreement. In particular, this Agreement does not allow you to:\n\nSell, give away, trade, let or hire the OSi Data\nExploit the OSi Data commercial without first seeking permission or notifying OSi or\nMisrepresent the data or its source.\n\nObligations on you:\nYou will ensure that you observe the restrictions on the use of the OSi Data set out in this Agreement\nYou will ensure that you fully protect the intellectual property rights in the OSi Data, and that you protect and do not interfere with our trade names and trade marks \nYou will not use the OSi Data, or allow it to be used by others, in any manner which we reasonably feel is inconsistent with the goodwill in our name\nYou must always acknowledge the copyright and the source of the data by including the following attribution statement: Contains Ordnance Survey Ireland data \xa9 OSi 2012.\n\nExpiry:\nIn the event of expiry of this Agreement you will immediately cease the use of the OSi Data which you hold or for which you are responsible.\n\nLiability / Warranty:\nYou are using a generalised, fit for purpose, non-maintained dataset; for access to and use of the definitive dataset contact OSi at www.osi.ie.\nIt is your responsibility to ensure that OSi Data is suitable for your intended purposes and we accept no liability as to the fitness of OSi Data supplied in meeting your needs. \nWe exclude to the fullest extent permissible by law all warranties, conditions or terms that may be implied by statute, statutory instrument, common law, custom or otherwise. \nWe shall not be under any liability of any sort or liable for any damage, injury or loss whatsoever, whether in tort (including negligence) or otherwise, other than liability for breach of this Agreement.\nWe shall not under any circumstances whatsoever be liable for any special, incidental, indirect or consequential damages including damages or costs incurred as a result of loss of time, loss of savings, loss of data or loss of profits.\n\nGoverning Law:\nThis Agreement will be governed by and construed in accordance with the laws of Ireland.', 'license']"
+299
+"['"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"', 'license', '"Creative Commons Attribution 4.0 International (CC BY 4.0) licence conditions apply. \n\nUsers are free to: \n\nSHARE (copy and redistribute the material in any medium or format) and ADAPT (remix, transform, and build upon the material for any purpose, even commercially).\n\nUnder the following terms:\n\nATTRIBUTION (Users must give appropriate credit, provide a link to the license, and indicate if changes were made. Users may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.)\n\nPlease use this specific attribution statement: ""Contains Irish Public Sector Data (Geological Survey Ireland) licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence""\n\nNO ADDITIONAL RESTRICTIONS \n\n(Users may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.)\n"', 'license']"
+284
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department Culture, Heritage and the Gaeltacht. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department Culture, Heritage and the Gaeltacht. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+278
+"['no limitations', 'https://creativecommons.org/licenses/by/4.0/', 'license', '', 'https://creativecommons.org/licenses/by/4.0/', 'license', '']"
+275
+"['Creative Commons licence conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+274
+"Keine Zugriffsbeschränkungen. Bereitgestellte Daten dienen ausschließlich der Information und besitzen keine Rechtsverbindlichkeit."@de
+268
+"Please ask the contact point!"@de
+267
+"['This data is the copyright of the Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. It may be reproduced and/or re-used subject to the latest version of the Irish PSI licence available at http://psi.gov.ie/documents/. The terms and conditions of the PSI General Licence must be read before the re-use of this data.', 'Public Sector Information Directive licence', 'license', 'Public Sector Information Directive licence', 'license']"
+265
+"['http://creativecommons.org/licenses/by/4.0/', 'Creative Commons Attribution 4.0 International License.', 'license', 'Creative Commons Attribution 4.0 International License.', 'license']"
+265
+"Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Vallendar bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Vallendar eingesehen werden können. Bitte nehmen Sie dazu Kontakt mit Frau Merg, Verbandsgemeindeverwaltung Vallendar auf (Tel: 0261/6503-149 oder E-Mail: marie.merg@vg-vallendar.de)."@de
+263
+"Indem sie den Inhalt aufrufen oder nutzen erkennen sie die nachfolgenden Bedinungen an.  Die Bereitstellung der Daten zu den Bebauungsplänen der Stadt Mayen ist eine unverbindliche Serviceleistung.  Die Nutzung der Daten aus der Onlineanwendung heraus erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke.  Sofern Sie keine schriftliche Einwilligung der Stadt Mayen erhalten haben, dürfen Sie den Inhalt weder abändern noch abgeleitete Werke daraus erstellen, die Inhalte nicht weiterverbreiten, veröffentlichen, verkaufen oder auf andere Weise für Dritte zugänglich machen. Die Nutzung für kommerzielle Zwecke bedarf ebenfalls der Einwilligung der Stadt Mayen  Der Stadt Mayen lehnt jegliche Haftung oder Gewährleistung auf die Richtigkeit/Genauigkeit und Vollständigkeit der Daten und Inhalte sowie die dauerhafte Verfügbarkeit der Serviceleistung ab.  Die Stadt haftet nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen.  Rechtlich verbindlich sind ausschließlich die original Bebauungspläne mit ihren Festsetzungen, die in den Räumen der Stadtverwaltung Mayen, Rosengasse 2, 3. OG, Zimmer 412, 56727 Mayen eingesehen werden können. Telefonische Rückfragen können unter der 02651. 881031 / 02651.884021 gestellt werden. Anfragen per E-Mail richten Sie bitte an folgende Adresse: fb3@mayen.de."@de
+263
+"Bei der Veröffentlichung der Bauleitpläne im Bereich der Verbandsgemeinde Otterbach-Otterberg handelt es sich um ein unverbindliches zusätzliches Informationsangebot, für dessen Richtigkeit und Aktualität von der Verbandsgemeindeverwaltung Otterbach-Otterberg keine Gewährleistung übernommen wird. Alle veröffentlichten Bebauungspläne, textlichen Festsetzungen und sonstige hinterlegten Angaben dienen nur als grober Richtwert und kleinere Abweichungen können möglich sein. Insbesondere treffen diese Daten keine rechtsverbindlichen Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Eine kommerzielle Nutzung der eingestellten Daten darf nicht erfolgen. Für ergänzende Beratung, Einsicht und Erläuterung der Bauleitpläne stehen Herr Schmitt oder Frau Schimmel der Abteilung III - Bauliche Infrastruktur während der Öffnungszeiten persönlich, telefonisch (06301/607-311 (Herr Schmitt), -303 (Frau Schimmel)) oder via Email (Martin.Schmitt@otterbach-otterberg.de, Sabine.Schimmel@otterbach-otterberg.de) zur Verfügung."@de
+262
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Monuments Service, Department of Culture, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Monuments Service, Department of Culture, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+260
+"keine Einschränkungen"@de
+253
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Kastellaun. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Kastellaun ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Kastellaun eingesehen werden können."@de
+252
+"Beschränkungen des öffentlichen Zugangs Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Obere Kyll bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Frau Elke Boumediene, Verbandsgemeindeverwaltung Obere Kyll auf (Tel: 06597/16-125 oder E-Mail elke.boumediene@oberekyll.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Obere Kyll bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Obere Kyll eingesehen werden können."@de
+251
+"WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne der Stadt Wittlich im geoportal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Stadtverwaltung Wittlich, für dessen RICHTIGKEIT und AKTUALITÄT von der Stadt Wittlich KEINE GEWÄHRLEISTUNG übernommen wird. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. durch eine BAUANFRAGE) bei der Stadtverwaltung Wittlich einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen des Fachbereich II / Bauordnung der Stadt Wittlich während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung bereit."@de
+251
+"L124-4-I-1 du code de l'environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.a)"@fr
+244
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Kirchen (Sieg) bzw. der jeweils plangebenden Ortsgemeinde oder der Stadt Kirchen (Sieg), Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Irle, Verbandsgemeindeverwaltung Kirchen auf (Tel: 02741-688-307 oder E-Mail: d.irle@kirchen-sieg.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Kirchen bzw. der plangebenden Ortsgemeinde oder der Stadt Kirchen ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+244
+"Nutzungsbedingungen: Es gelten keine Bedingungen"@de
+230
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Annweiler am Trifels bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Annweiler am Trifels bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Annweiler am Trifels eingesehen werden können."@de
+229
+"„Bei der Veröffentlichung der Bauleitpläne im Verwaltungsbereich der Verbandsgemeinde Brohltal im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeindeverwaltung Brohltal. Für die Richtigkeit, Aktualität und Vollständigkeit wird von der Verbandsgemeindeverwaltung Brohltal sowie den zugehörigen Ortsgemeinden keine Gewährleistung übernommen. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Nutzungen und Bauvorhaben. Daher wird dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung z. B. in Form einer Bauvoranfrage bei der Verbandsgemeindeverwaltung Brohltal - Bauaufsicht einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Bauabteilung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung bereit.“"@de
+223
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Inventory of Architectural Heritage, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Inventory of Architectural Heritage, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+220
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Maxdorf , Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Maxdorf ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+219
+"aufgrund der Rechte des geistigen Eigentums"@de
+218
+"Geen beperkingen"@nl
+212
+"Beschränkungen des öffentlichen Zugangs Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Gerolstein bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Winfried Schegner, Verbandsgemeindeverwaltung Gerolstein auf (Tel: 06591/13-248 oder E-Mail winfried.schegner@gerolstein.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Gerolstein bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Gerolstein eingesehen werden können."@de
+205
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Kleinblittersdorf."@de
+201
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Landau-Land bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Huber, Verbandsgemeindeverwaltung Landau-Land auf (Tel: 06341/143-130 oder E-Mail: mhuber@landau-land.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Landau-Land bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Landau-Land eingesehen werden können."@de
+200
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Puettlingen."@de
+199
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Blieskastel."@de
+199
+"['Creative Commons CC-BY 4.0 licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+198
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Blieskastel."@de
+198
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Frankenberg ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+198
+"Creative Commons: Namensnennung - Keine  kommerzielle Nutzung - Keine Bearbeitungen 3.0 Deutschland; Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Morbach. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Morbach ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Gemeinde Morbach eingesehen werden können. Für die Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit der im GeoPortal RLP veröffentlichten Bauleitpläne übernimmt die Gemeinde Morbach keine Haftung oder Gewährleistung."@de
+197
+"['Commissioners of Irish Lights Data Licence conditions apply', 'Commissioners of Irish Lights Data Licence', 'license', 'Commissioners of Irish Lights Data Licence', 'license']"
+194
+"['aUnless otherwise indicated the data included in this dataset series is Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage and the Gaeltacht. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence. https://creativecommons.org/licenses/by/4.0/', 'Unless otherwise indicated the data included in this dataset series is Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage and the Gaeltacht. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence. https://creativecommons.org/licenses/by/4.0/', 'license', 'Unless otherwise indicated the data included in this dataset series is Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage and the Gaeltacht. This copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence. https://creativecommons.org/licenses/by/4.0/', 'license']"
+193
+"['Creative Commons Non Commercial No Derivatives licence conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+193
+"Baupolizeiverodnung vom 08.06.1938 (BPVO)"@de
+192
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Rheinböllen. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Rheinböllen ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Rheinböllen eingesehen werden können."@de
+191
+"Dato pubblico (cfr. art. 1 Codice Amministrazione Digitale)"@it
+191
+"Este servicio se puede usar de modo libre y gratuito siempre que se mencione a los autores y propietarios de la información"@en
+190
+"No hi ha limitacions"@cat
+190
+"Este servicio se puede usar de modo libre y gratuito en cualquier caso, siempre que se mencione al Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente (MAPAMA) como autor y propietario de la información."@es
+189
+"Sämtliche Rechte an diesem Dienst liegen bei der VG Dannstadt-Schauernheim, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde VG Dannstadt-Schauernheim ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+188
+"no limitation"@en
+186
+"WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne der Ortsgemeinden Hördt, Kuhardt, Leimersheim und Rülzheim als SEKUNDÄRDATEN im geoportal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeindeverwaltung Rülzheim, für dessen RICHTIGKEIT und AKTUALITÄT von den Ortsgemeinden und der Verbandsgemeinde KEINE GEWÄHRLEISTUNG übernommen wird. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung) bei der Verbandsgemeindeverwaltung Rülzheim einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Bauverwaltung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+186
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Hillesheim bzw. der jeweils plangebenden Ortsgemeinde/Stadt. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Manfred Widua, Verbandsgemeindeverwaltung Hillesheim (Tel: 06593-801-26 oder E-Mail m.widua@hillesheim.de) auf. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Hillesheim bzw. der plangebenden Ortsgemeinde/Stadt ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsge­meindeverwaltung Hillesheim, Burgstraße 6, 54576 Hillesheim eingesehen werden können."@de
+185
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Tholey."@de
+181
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Illingen."@de
+180
+"Bereitgestellte Daten dienen ausschließlich der Information und besitzen keine Rechtsverbindlichkeit"@de
+179
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Fritzlar ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+179
+"Hamburgisches Bebauungsplangesetz vom 31.10.1923 (BPlanG)"@de
+178
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Korbach ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+175
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Dillingen."@de
+174
+"https://creativecommons.org/licenses/by-nc/3.0/de/"@de
+173
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Witzenhausen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+171
+"nessun vincolo"@it
+171
+"WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne im Bereich der Verbandsgemeinde Speicher im GeoPortal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeindeverwaltung Speicher. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Verbandsgemeinde Speicher einschließlich ihrer verbandsangehörigen Ortsgemeinden und der Stadt Speicher keine Haftung oder Gewährleistung übernommen. Die Verbandsgemeinde Speicher einschließlich ihrer verbandsangehörigen Ortsgemeinden und der Stadt Speicher haften nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen. Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Verbandsgemeinde Speicher. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne, die in den Räumen der Verbandsgemeindeverwaltung ‚Speicher, Bahnhofstraße 36, 54662 Speicher, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Bauabteilung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+170
+"There are not limitations"@en
+170
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Bad Wildungen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+169
+"['Creative Commons licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'https://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+168
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Gebhardshain, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Gebhardshain ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+168
+"Nutzungsbedingungen: Die Daten und Dienste können mit folgenden Bedingungen genutzt werden (http://www.ioer-monitor.de/fileadmin/Dokumente/PDFs/Nutzungsbedingungen_IOER-Monitor.pdf)"@de
+166
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Waldbreitbach bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Klein, Leiter der Bauabeilung der VG Waldbreitbach auf (Tel. 02638/8009-48 oder E-Mail: heinz-josef.klein@waldbreitbach-vg.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Waldbreitbach bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produkts, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Waldbreitbach eingesehen werden können."@de
+166
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Römerberg-Dudenhofen, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Römerberg-Dudenhofen ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+166
+"Nutzungsbedingungen: Es gelten die Nutzungsbestimmungen und rechtlichen  Hinweise zur Bereitstellung von Bebauungsplänen auf dem Geoportal der Stadt Mannheim: https://www.gis-mannheim.de/index.php?id=21"@de
+166
+"Saemtliche Rechte an diesem Dienst liegen beim saarlaendischen Landesamt fuer Vermessung, Geoinformation und Landentwicklung (LVGL). Das Betrachten des Dienstes in Onlineverfahren des Landesamtes für Vermessung, Geoinformation und Landentwicklung (LVGL) oder im “Geoportal Saarland“ ist kostenfrei.  Jegliche andere Nutzung, so auch das Einbinden in weitere Anwendungen (Download) ist kostenpflichtig und bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit dem LVGL (www.lvgl.saarland.de, Tel.-Nr.: +49681/ 9712 - 226) auf. --------------- All rights of this service are reserved by Landesamt fuer Vermessung, Geoinformation und Landentwicklung (LVGL). Viewing within the online-applications of the Landesamt fuer Vermessung, Geoinformation und Landentwicklung (LVGL) or within “Geoportal Saarland” is free of charge. Any further utilization, such as embedding in other applications (download) is subject to fee and requires a contractual agreement. Please contact the LVGL for that (www.lvgl.saarland.de, Tel.-Nr.: +49681/ 9712 - 226)."@de
+164
+"['Creative Commons Data Licence conditions apply', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+162
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Marpingen."@de
+162
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Sankt Goar-Oberwesel. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Sankt Goar-Oberwesel ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeinde Sankt Goar-Oberwesel eingesehen werden können."@de
+162
+"Nutzungsbedingungen: Saemtliche Rechte an diesem Dienst liegen beim saarlaendischen Landesamt fuer Vermessung, Geoinformation und Landentwicklung (LVGL). Jegliche Nutzung, so auch das Einbinden in andere Anwendungen (Download) ist kostenpflichtig und bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit dem LVGL (www.lvgl.saarland.de, Tel.-Nr.: +49681/ 9712 - 226) auf. --------------- All rights of this service are reserved by Landesamt fuer Vermessung, Geoinformation und Landentwicklung (LVGL). Any utilization, such as embedding in other applications (download) is subject to fee and requires a contractual agreement. Please contact the LVGL for that (www.lvgl.saarland.de, Tel.-Nr.: +49681/ 9712 - 226)."@de
+161
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Thalfang am Erbeskopf bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen der Pläne im Geoportal Rheinland-Pfalz ist kostenfrei. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Thalfang am Erbeskopf ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich Originalpläne, die in den Räumen der Verbandsgemeinde Thalfang am Erbeskopf eingesehen werden können. Es wird daher dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bei der Verbandsgemeinde Thalfang am Erbeskopf einzuholen. Für die Richtigkeit, Genauigkeit, Aktualität und Vollständigkeit der im Geoportal Rheinland-Pfalz veröffentlichten Bauleitpläne übernimmt die Verbandsgemeinde Thalfang am Erbeskopf keine Haftung oder Gewährleistung.   Lizenz: Creative Commons: Namensnennung – Keine kommerzielle Nutzung – Keine Bearbeitung 3.0 Deutschland"@de
+160
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Stadt Schifferstad, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Stadt Schifferstadt ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+160
+"Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Bobenheim-Roxheim, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Bobenheim-Roxheim ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+159
+"none"@de
+158
+"Die Nutzung der Daten ist mit Quellenhinweis gestattet. Für die Nutzung der Daten werden keine Gebühren erhoben. Es wird keine Gewähr für die Richtigkeit und Vollständigkeit der Daten übernommen. Eine Haftung für Schäden aller Art aus der Überlassung und Weiterverarbeitung der Daten ist ausgeschlossen. Rechtliche Hinweise finden Sie auf den Themenseiten des Landesplanungsportals unter LEP und Regionalpläne."@de
+158
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs with the assistance of the Regional Veterinary Labs of the Department of Agriculture, Food and the Marine, and the State Laboratory. \n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs with the assistance of the Regional Veterinary Labs of the Department of Agriculture, Food and the Marine, and the State Laboratory. \n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+157
+"Bez omezení"@cs
+157
+"Die bereitgestellten Daten und Metadaten dürfen nicht kommerziell genutzt werden insbesondere nicht -	präsentiert, verändert sowie bearbeitet werden; -	mit eigenen Daten und Daten Anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden;in interne und externe Geschäftsprozesse, Produkte und Anwendungen in öffentlichen und nicht öffentlichen elektronischen Netzwerken eingebunden werden. Darüber hinaus dürfen die Daten vervielfältigt, ausgedruckt, sowie an Dritte übermittelt werden. Eine Verwendung der zu Verfügung gestellten Daten bedarf der ausdrücklichen Zustimmung der Stadtverwaltung Germersheim. Für die Korrektheit und Aktualität der Daten wird seitens der Stadt Germersheim keine Gewährleistung übernommen. Haftungsansprüche können nicht geltend gemacht werden."@de
+154
+"Nutzungsbedingungen: keine Einschränkungen"@de
+150
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Mandelbachtal."@de
+149
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Homberg ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+149
+"Die Bereitstellung der Daten zu den Bebauungsplänen der Verbandsgemeinde Wissen ist eine unverbindliche Serviceleistung. Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Wissen. Die Nutzung der Daten aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeinde Wissen ist ausdrücklich ausgeschlossen. Sofern Sie keine schriftliche Einwilligung der Verbandsgemeinde Wissen haben, dürfen Sie den Inhalt weder abändern noch abgeleitete Werke daraus erstellen, die Inhalte nicht weiterverbreiten, veröffentlichen, verkaufen oder auf andere Weise für Dritte zugänglich machen. Das Anschauen ("Viewing") in der Online-Anwendung GeoPortal.rlp ist kostenfrei. Die Verbandsgemeinde Wissen lehnt jegliche Haftung oder Gewährleistung auf die Richtigkeit/Genauigkeit und Vollständigkeit der Daten und Inhalte sowie die dauerhafte Verfügbarkeit der Serviceleistung ab. Die Verbandsgemeinde Wissen haftet nicht für Schäden, welche durch die direkte oder indirekte Nutzung entstehen. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne mit ihren Festsetzungen, die in den Räumen der Verbandsgemeinde Wissen, Fachbereich Bauen und Umwelt, Rathausstraße 75, 57537 Wissen, eingesehen werden können. Telefonische Rückfragen zu den Bebauungsplänen können unter den Telefonnummern 02742-939171 oder 02742-939178 gestellt werden."@de
+149
+"Die kostenfreie Nutzung der Daten ist nur für interne Zwecke erlaubt."@de
+148
+"Aufbaugesetz vom 11.04.1949 (AufbauG)"@de
+145
+"Bei der Veröffentlichung der Bauleitpläne im Bereich der Verbandsgemeinde Arzfeld handelt es sich um ein unverbindliches zusätzliches Informationsangebot, für dessen Richtigkeit und Aktualität von der Verbandsgemeindeverwaltung Arzfeld keine Gewährleistung übernommen wird.  Alle veröffentlichten Bebauungspläne, textlichen Festsetzungen und sonstige hinterlegten Angaben dienen nur als grober Richtwert und kleinere Abweichungen können möglich sein.   Insbesondere treffen diese Daten keine rechtsverbindlichen Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen.   Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. durch eine Bauvoranfrage)  bei der Verbandsgemeindeverwaltung Arzfeld, Fachbereich 2, Bauleitplanung/Untere Bauaufsichtsbehörde, einzuholen.   Eine kommerzielle Nutzung der eingestellten Daten darf nicht erfolgen.  Für ergänzende Beratung, Einsicht  und Erläuterung der Bauleitpläne stehen die Mitarbeiter/innen des Fachbereiches 2 , Bauleitplanung/Untere Bauaufsichtsbehörde, während der Öffnungszeiten persönlich (nach Terminvereinbarung), telefonisch (Tel.: 06550/974-157) oder via Email (bauamt@vg-arzfeld.de) zur Verfügung."@de
+145
+"Pas de restriction d’accès publique"@fr
+144
+"http://creativecommons.org/publicdomain/mark/1.0/deed.nl"@nl
+144
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Grossrosseln."@de
+142
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Gudensberg ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+142
+"Sämtliche Rechte an diesem Dienst liegen bei der Stadt Boppard. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Stadt Boppard ist ausdrücklich ausgeschlossen. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Stadt Boppard eingesehen werden können."@de
+141
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Saarlouis."@de
+139
+"['Creative Commons Non-Commercial No Derivatives licence conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+137
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Kreisstadt Eschwege ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+136
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Wallerfangen."@de
+135
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Eppelborn."@de
+133
+"['No limitations', 'https://creativecommons.org/licenses/by/4.0/', 'license', 'https://creativecommons.org/licenses/by/4.0/', 'license']"
+132
+"Informations non opposables au tiers."@fr
+131
+"['http://creativecommons.org/licenses/by/4.0/', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. \n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions', 'Copyright Government of Ireland. This dataset was created by National Parks and Wildlife Service, Department of Arts, Heritage, Regional, Rural and Gaeltacht Affairs. \n\nThis copyright material is licensed for re-use under the Creative Commons Attribution 4.0 International licence.  http://creativecommons.org/licenses/by/4.0/', 'otherRestrictions']"
+130
+http://schema.theodi.org/odrs#RightsStatement	
+129
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Weiskirchen."@de
+128
+"Nutzungsbedingungen: Creative Commons CC BY 4.0"@de
+126
+"Este servicio se puede usar de modo libre y gratuito siempre que sea para usos no comerciales y se mencione a los autores y propietarios de la información."@es
+124
+"{ "id": "dl-de/by-2-0", "name": "Datenlizenz Deutschland – Namensnennung – Version 2.0", "url": "https://www.govdata.de/dl-de/by-2-0", "quelle": "Nationalparkverwaltung Niedersächsisches Wattenmeer" }"@de
+123
+"['Creative Commons CC-Non Commercial-No Derivatives licence conditions apply', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license', 'https://creativecommons.org/licenses/by-nc-nd/3.0/ie/', 'license']"
+121
+"Es gelten keine Bedingungen."@de
+121
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Frielendorf ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+121
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Riegelsberg."@de
+120
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Sulzbach."@de
+119
+"Sämtliche Rechte an diesem Dienst liegen bei der Verbandsgemeinde Rhein-Mosel bzw. der jeweils plangebenden Ortsgemeinde. Das Anschauen ("Viewing") in der Online-Anwendung des GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Bitte nehmen Sie dazu Kontakt mit Herrn Zelter, Verbandsgemeindeverwaltung Rhein-Mosel auf (Tel: 02607/49-41 oder E-Mail: ZelterK@vgrm.de). Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Verbandsgemeindeverwaltung Rhein-Mosel bzw. der plangebenden Ortsgemeinde ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Nutzung der Daten aus der Onlineanwendung heraus für private Zwecke erfolgt auf eigenes Risiko. Rechtlich verbindlich sind ausschließlich die Originalpläne, die in den Räumen der Verbandsgemeindeverwaltung Rhein-Mosel eingesehen werden können."@de
+119
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Bad Arolsen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+118
+"['Creative Commons Attribution 4.0 International (CC BY 4.0) licence', 'https://creativecommons.org/licenses/org/by/4.0/', 'license', 'https://creativecommons.org/licenses/org/by/4.0/', 'license']"
+116
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Schwalmstadt ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+116
+"No hay limitaciones"@es
+115
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Homberg (Ohm) ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Stadt Homberg (Ohm). Es besteht kein Anspruch auf Vollständigkeit."@de
+113
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Allendorf (Eder) ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+113
+"['license', 'license']"
+112
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Volkmarsen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+110
+"WICHTIGE HINWEISE: Bei der Veröffentlichung der Bauleitpläne der Stadt Remagen unter geoportal.rlp.de handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Stadtverwaltung Remagen nach § 6a und § 10a Baugesetzbuch (BauGB). Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Stadt Remagen keine Haftung oder Gewährleistung übernommen. Die Stadt haftet insbesondere nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen. Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht-kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, die Veröffentlichung, der Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Stadt Remagen. Rechtlich verbindlich sind ausschließlich die Originale der Bauleitpläne, die in den Räumen der Stadtverwaltung Remagen, Bachstraße 7, 53424 Remagen, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiterinnen und Mitarbeiter des Fachbereichs 2 (Bauverwaltung), während der allgemeinen Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+107
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Quierschied."@de
+102
+""WICHTIGER HINWEIS: Bei der Veröffentlichung der Bauleitpläne der Verbandsgemeinde Meisenheim im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot, für dessen Richtigkeit und Aktualität KEINE GEWÄHRLEISTUNG übernommen wird. Insbesondere treffen diese Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Es wird deshalb dringend empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen wie z.B. Grundstücksverträgen eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. durch eine Bauvoranfrage ) bei der Verbandsgemeinde Meisenheim einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Abteilung "Bauliche Infrastruktur“ der Verbandsgemeinde Meisenheim während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung.""@de
+102
+"L'accesso e la fruibilità al dato sono pubblici (Dato pubblico)"@it
+101
+"Pas de limitation d'accès public."@fr
+101
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Alsfeld ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Stadt Alsfeld. Es besteht kein Anspruch auf Vollständigkeit."@de
+99
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Schlitz ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Stadt Schlitz. Es besteht kein Anspruch auf Vollständigkeit."@de
+99
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Römerberg, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Römerberg ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+99
+"http://creativecommons.org/licenses/by/4.0/"
+98
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Gersheim."@de
+97
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Mücke ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Gemeinde Mücke. Es besteht kein Anspruch auf Vollständigkeit."@de
+97
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Willingen (Upland) ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+96
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Merchweiler."@de
+96
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Schwalbach."@de
+94
+"Der bereitgestellte Darstellungsdienst darf für interne und kommerzielle Zwecke verwendet werden, um Geobasisdaten anzuzeigen, in ihnen zu navigieren, sie zu vergrößern/verkleinern, zu verschieben sowie Informationen aus Legenden und sonstige relevante Inhalte von Metadaten anzuzeigen. Ausdrucke sind untersagt, mit Ausnahme von Ausdrucken zu privaten Zwecken. Eine dauerhafte Datenspeicherung (Download) ist untersagt, d.h. nach Beendigung der Nutzersession dürfen keine Geobasisdaten beim Nutzer gespeichert bleiben. Somit ist auch die Weitergabe und Weiterverwendung der enthaltenen Daten nicht zulässig. Der Darstellungsdienst darf im Internet veröffentlicht werden. Dabei ist zu gewährleisten, dass die Präsentation mit einem Hinweis auf die amtlichen Datengrundlagen versehen ist. Die Hessische Verwaltung für Bodenmanagement und Geoinformation erstellt die Geobasisdaten mit der zur Erfüllung ihres gesetzlichen Auftrages erforderlichen Sorgfalt. Für die inhaltliche Richtigkeit, eine bestimmte Datenqualität oder die dauerhafte Bereitstellung wird keine Haftung übernommen. Eine Pflicht auf Schadensersatz wird mit Ausnahme von Vorsatz und grober Fahrlässigkeit ausgeschlossen. Die Schadenshaftung nach § 839 BGB in Verbindung mit Artikel 34 GG bleibt unberührt."@de
+94
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Lambsheim, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Lambsheim ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+94
+"The data presented as part of the SFI Gender Dashboard is available to use free of charge and licensed under the Creative Commons Attribution (CC-BY) Licence"
+92
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Bad Hersfeld ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+92
+"No limitations"@en
+91
+"Podmínky užití viz Obchodní podmínky ZÚ"@cs
+90
+"Terms of use see Terms of trade"@en
+90
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Wadgassen."@de
+88
+"http://sitex.gobex.es/SITEX/pages/licencia"@es
+87
+"Según licencia"@es
+87
+"Datenlizenz Deutschland - Namensnennung - Version 2.0; URL: https://www.govdata.de/dl-de/by-2-0 Die Namensnennung der Vermessungs- und Katasterverwaltung Rheinland-Pfalz als Rechteinhaberin hat in folgender Weise zu erfolgen: ©GeoBasis-DE / LVermGeoRP (Jahr des Datenbezugs), dl-de/by-2-0, http://www.lvermgeo.rlp.de [Daten bearbeitet]; Es gelten folgende Regelungen zu Gewährleistung und Haftung; URL:https://lvermgeo.rlp.de/de/geodaten/opendata/gewaehrleistung-haftung/"@de
+86
+"Hamburgisches Transparenzgesetz (HmbTG)"@de
+84
+"Otras condiciones de acceso y uso: Aviso Legal [http://www.madrid.org/cartografia/staticFiles/catalogo/aviso_legal.htm]"@es
+83
+"Datenlizenz Deutschland – Namensnennung – Version 2.0; URL: https://www.govdata.de/dl-de/by-2-0 Die Namensnennung der Vermessungs- und Katasterverwaltung Rheinland-Pfalz als Rechteinhaberin hat in folgender Weise zu erfolgen: ©GeoBasis-DE / LVermGeoRP (Jahr des Datenbezugs), dl-de/by-2-0, http://www.lvermgeo.rlp.de [Daten bearbeitet]; Es gelten folgende Regelungen zu Gewährleistung und Haftung; URL:https://lvermgeo.rlp.de/de/geodaten/opendata/gewaehrleistung-haftung/"@de
+83
+"Licence Ouverte : https://www.etalab.gouv.fr/licence-ouverte-open-licence"@fr
+83
+"no restrictions"@nor
+83
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Gemünden ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+82
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Herbstein ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Stadt Herbstein. Es besteht kein Anspruch auf Vollständigkeit."@de
+81
+"Nutzungsbedingungen: Es gelten die Lizenzbedingungen „Datenlizenz Deutschland - Namensnennung - Version 2.0“ bzw. „dl-de/by-2-0” (https://www.govdata.de/dl-de/by-2-0) mit den dort geforderten Angaben zum Quellenvermerk. Als Rechteinhaber und Bereitsteller ist „Land NRW“, sowie das Jahr des Datenbezugs in Klammern anzugeben. Beispiel für Quellenvermerk: Land NRW (2017) Datenlizenz Deutschland - Namensnennung - Version 2.0 (www.govdata.de/dl-de/by-2-0). Haftungsbeschränkung: Für die Kompatibilität der zur Verfügung gestellten Daten oder Dienste mit den Systemen des Nutzers, die inhaltliche Richtigkeit, eine bestimmte Datenqualität oder die dauerhafte Bereitstellung wird keine Haftung übernommen. Davon ausgenommen sind Schadensersatzansprüche auf Grund einer Verletzung des Lebens, des Körpers und der Gesundheit. Ebenfalls ausgenommen ist die Haftung für Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen. Eine über gesetzliche Schadensersatzansprüche hinausgehende Haftung ist ausgeschlossen."@de
+79
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Vöhl ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+79
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Spiesen-Elversberg."@de
+79
+"http://creativecommons.org/publicdomain/zero/1.0/deed.nl"@nl
+79
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Felsberg ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+78
+"Hamburgisches Vermessungsgesetz (HmbVermG) vom 20. April 2005"@de
+76
+"Nutzungsbedingungen: Dieser Datensatz kann gemäß den Nutzungsbestimmungen von Datenlizenz Deutschland – Namensnennung – Version 2.0 (dl-de/by-2-0) (https://www.govdata.de/dl-de/by-2-0) genutzt werden."@de
+76
+"andere Einschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Lauterbach (Hessen) ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Stadt Lauterbach (Hessen). Es besteht kein Anspruch auf Vollständigkeit."@de
+76
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Waldsee, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Waldsee ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+75
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Rehlingen-Siersburg."@de
+74
+"Nutzungsbedingungen: Datenlizenz Deutschland – Namensnennung – Version 2.0 (https://www.govdata.de/dl-de/by-2-0). Die Namensnennung lautet: Nationalparkverwaltung Niedersächsisches Wattenmeer"@de
+73
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Melsungen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+73
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Diemelsee ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+73
+"{"id":"cc-by-4.0",  "name": "Creative Commons Attribution 4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode", "quelle": "Datenquelle: CC‐BY‐4.0 ‐ Stadt Wuppertal ‐ offenedaten‐wuppertal.de"}"@de
+71
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Freiensteinau ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Gemeinde Freiensteinau. Es besteht kein Anspruch auf Vollständigkeit."@de
+71
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Schwalmtal ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Gemeinde Schwalmtal. Es besteht kein Anspruch auf Vollständigkeit."@de
+71
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Neukirchen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+71
+"Hiermit weisen wir Sie darauf hin, dass alle Bebauungspläne, textlichen Festsetzungen und sonstige hinterlegten Angaben nur als grober Richtwert dienen sollen und kleinere Abweichungen möglich sein können. Sollten Sie die Originalpläne einsehen wollen, bitten wir Sie, sich an die Verbandsgemeindeverwaltung Dierdorf zu wenden!"@de
+71
+"There are no access constraints."@da
+71
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Hessisch Lichtenau ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+69
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Rotenburg an der Fulda ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+69
+"['http://creativecommons.org/licenses/by/4.0/', 'Public Sector Information Directive licence', 'license', 'Public Sector Information Directive licence', 'license']"
+68
+"Datenlizenz Deutschland – Namensnennung – Version 2.0; URL: https://www.govdata.de/dl-de/by-2-0 Die Namensnennung der Vermessungs- und Katasterverwaltung Rheinland-Pfalz als Rechteinhaberin hat in folgender Weise zu erfolgen: ©GeoBasis-DE / LVermGeoRP (Jahr des Datenbezugs), dl-de/by-2-0, http://www.lvermgeo.rlp.de [Daten bearbeitet]; Es gelten folgende Regelungen zu Gewährleistung und Haftung; URL: https://lvermgeo.rlp.de/de/geodaten/opendata/gewaehrleistung-haftung/"@de
+68
+"nessuna limitazione"@it
+67
+"Nutzungsbedingungen: Alle Nutzungsarten sind frei, aber grundsaetzlich wird nicht auf das Urheberrecht verzichtet."@de
+66
+"Der Dienst stellt keine rechtsverbindliche Auskunft dar. Die kostenfreie Nutzung der Geo- und Metadaten sowie der Geodatendienste ist für private und kommerzielle Zwecke erlaubt."@de
+66
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Diemelstadt ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+66
+"El uso de los servicios de interoperabilidad es gratuito no requiere licencia, pero la descarga (también gratuita) u obtención de información geográfica digital para uso no comercial, requiere la aceptación de las licencias de uso reguladas en el Decreto de Cantabria 87/2013, de 26 de diciembre.
+
+Licencia para uso no comercial del producto descargado:
+
+______________________________________
+
+LICENCIA DE CESIÓN DE USO NO COMERCIAL
+______________________________________
+
+PRIMERA. Definición de uso no comercial.
+
+La presente licencia autoriza el uso no comercial, entendiendo como tal el uso que no conlleva aprovechamiento económico directo.
+  
+SEGUNDA. Finalidad.
+ 
+Se autoriza el uso, la reproducción y la generación de productos derivados siempre y cuando se realice con fines no comerciales y bajo los mismos términos de la 
+presente licencia.
+ 
+TERCERA. Reconocimiento de la procedencia de los datos.
+ 
+El uso de los datos o la redistribución obliga a citar la procedencia de los mismos de forma clara y explícita en cada ejemplar reproducido. El reconocimiento de dicha 
+propiedad intelectual se realizará en cada ejemplar reproducido de la siguiente forma: «© Gobierno de Cantabria. Información gratuita disponible en http://mapas.cantabria.es». 
+En el caso de productos derivados, entendiendo como tales los que tienen una transformación sustancial de la fuente de datos original que la hagan irreconocible, 
+la cita se realizará en cada ejemplar reproducido de la forma: «Realizado a partir de datos del Gobierno de Cantabria disponibles de forma gratuita en http://mapas.cantabria.es». 
+En el caso de propiedad compartida, la cita incluirá con el mismo criterio al resto de Administraciones coproductoras. Esta cita deberá ser visible junto con la propia 
+información licenciada o de otra que incorpore ésta o cualquier derivado. Si tiene dudas acerca de qué administraciones son cotitulares de los datos, consulte el sistema de 
+descargas manual a través de http://mapas.cantabria.es o contáctenos por teléfono.
+ 
+CUARTA. Propiedad de los datos.
+ 
+La propiedad de los datos pertenece a la Administración o Administraciones productoras.
+
+QUINTA. Reproducción y Redistribución.
+ 
+Se autoriza la reproducción o redistribución de la información digital licenciada, o de otra que incorpore ésta o cualquier derivado, a otras personas físicas o jurídicas, para 
+que el nuevo usuario haga un uso no comercial de la misma. Será obligatoria la aceptación explícita por el nuevo usuario de las presentes condiciones de uso.
+ 
+SEXTA. Limitaciones de uso.
+ 
+La reventa de las reproducciones o de cualquier otro producto derivado o la difusión de los datos de forma masiva por Internet requerirá de una licencia comercial específica al 
+efecto, expedida por escrito por la Administración de la Comunidad Autónoma de Cantabria.
+ 
+SÉPTIMA. Limitación de responsabilidad.
+ 
+La cesión de datos no supone la concesión de ningún tipo de aval o patrocinio sobre los productos derivados o aplicaciones en las que se pudieran utilizar los datos cedidos. 
+La Administración de la Comunidad Autónoma de Cantabria y, en su caso, las demás Administraciones coproductoras, declinan cualquier responsabilidad sobre el uso derivado 
+de los datos geográficos por parte del usuario.
+ 
+OCTAVA. Ámbito temporal y geográfico.
+ 
+La duración temporal de la licencia y el ámbito geográfico de concesión de la misma son ilimitados. No obstante, el Gobierno de Cantabria se reserva la posibilidad de modificar 
+las condiciones de licenciamiento de su información geográfica.
+ 
+ESTA INFORMACIÓN ESTÁ DISPONIBLE DE FORMA GRATUITA EN LA PÁGINA WEB DEL GOBIERNO DE CANTABRIA
+
+
+Más información en: http://mapas.cantabria.es"@es
+66
+"http://www.geology.cz/poskytovani-dat"@cs
+66
+"Nutzungsbedingungen: Bedingungen unbekannt"@de
+65
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Altrip, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Altrip ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt. Die Bebauungsplaninformationen stellen eine Serviceleistung zur allgemeinen Vorabinformation dar und ersetzen keine individuelle Beratung. Besonderheiten wie z. B. Umlegungsverfahren, Veränderungssperren usw. sind bei den Bebauungsplaninformationen nicht berücksichtigt und müssen konkret erfragt werden. Somit wird eine individuelle Beratung dringend empfohlen.  Ungeachtet der o. g. Ausführungen gilt folgendes: Die Gemeinde Altrip hat die Bebauungsplaninformationen sorgfältig geprüft. Sie übernimmt jedoch keine Gewähr für die Richtigkeit und Vollständigkeit der von den Nutzenden daraus abgeleiteten Daten.  Die Gemeinde Altrip übernimmt keine Haftung für Personen-, Sach- oder Folgeschäden, die den Nutzenden durch oder infolge der Übernahme, Weiterverarbeitung oder Nutzung der Bebauungsplaninformationen entstehen.  Die Gemeinde Altrip haftet nicht für Ansprüche Dritter, insbesondere aus der gesetzlichen Haftpflicht, die durch oder infolge der Übernahme, Weiterverarbeitung oder Nutzung der Bebauungsplaninformationen entstehen.  Die vorgenannten Regelungen gelten analog auch für den Flächennutzungsplan."@de
+65
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Bad Sooden-Allendorf ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+65
+"Saemtliche Rechte an diesem Dienst liegen bei der Stadt Friedrichsthal."@de
+64
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Battenberg (Eder) ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+64
+""
+64
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Edertal ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+64
+"http://www.geology.cz/data-provision"@en
+64
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Burgwald ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+63
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Grebenhain ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Gemeinde Grebenhain. Es besteht kein Anspruch auf Vollständigkeit."@de
+63
+"Die Ressource unterliegt lizenzrechtlichen Bestimmungen. Rechtsansprüche können aus dem Inhalt des Dienstes weder begründet noch abgeleitet werden. Der Dienst und die damit verbundenen Datensätze werden zwar fortlaufend aktualisiert, der Landkreis Nienburg/Weser übernimmt aber keine Haftung oder Garantie für ihre Aktualität, Vollständigkeit und deren Inhalten. Werden amtliche Auskünfte zu einem bestimmten Gebiet oder einer bestimmten Frage benötigt, erteilt diese auf Anfrage die zuständige Behörde; in der Regel ist dies der Landkreis Nienburg/Weser oder die zuständige Gemeinde."@de
+62
+"Zugriffseinschränkungen: Es gelten die Nutzungsbedingungen für Geodaten der Stadt Wolfsburg"@de
+62
+"Im Rahmen der Umsetzung der eGovernment-Initiative des Landes Rheinland-Pfalz wurde der Aufbau einer Geodateninfrastruktur beschlossen, welche Pläne mit räumlichen Geltungsbereichen (Bebauungspläne, Flächennutzungspläne, Grünordnungspläne) der Öffentlichkeit über eine Internetplattform bereitstellt.    Die Datensätze zu den rechtsverbindlichen Bebauungsplänen im Bereich der Verbandsgemeinde Adenau wurden entsprechend aufbereitet und in das „GeoPortal“ eingepflegt.    Somit sind die Voraussetzungen für einen Zugriff auf die Bebauungsplandaten der Verbandsgemeinde Adenau über das „GeoPortal“ des Landes geschaffen. Den Bürgern bieten sich außerdem weitere Verknüpfungsmöglichkeiten mit anderen Daten wie Luftbild, Katasterkarte oder Bodenrichtwerte.  Die Nutzung der Daten wird über folgende Nutzungsbedingungen geregelt.     Nutzungsbedingungen:  Bei der Veröffentlichung der Bauleitpläne im Bereich der Verbandsgemeinde Adenau im GeoPortal.rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Verbandsgemeindeverwaltung Adenau. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Verbandsgemeinde Adenau einschließlich ihrer verbandsangehörigen Ortsgemeinden keine Haftung oder Gewährleistung übernommen. Die Verbandsgemeinde Adenau einschließlich ihrer verbandsangehörigen Ortsgemeinden haften nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen. Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Verbandsgemeinde Adenau. Rechtlich verbindlich sind ausschließlich die Original-Bebauungspläne, die in den Räumen der Verbandsgemeindeverwaltung Adenau, Kirchstraße 15-19, 53518 Adenau, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Bauabteilung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung.    Die grundsätzliche Nutzung der zur Verfügung stehenden Kartendienste des Geoportals ist über die „Datenlizenz Deutschland –Namensnennung - 2.0“ geregelt."@de
+62
+"nessuna condizione applicabile"@it
+62
+"# Met Éireann Creative Commons Attribution Licence Notice
+
+## Terms and Conditions: 
+
+* Met Éireann retains Intellectual Property Rights and copyright over our data. 
+* Met Éireann must be acknowledged (attributed) as the source. 
+* Met Éireann does not accept any liability whatsoever for any error or omission in the data, their availability, or for any loss or damage arising from their use.
+* Users must remove attribution if requested by Met Éireann.
+
+## Licence
+This data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0). To view a copy of this licence, visit https://creativecommons.org/licenses/by/4.0/ 
+ 
+## Summary 
+You are free to:
+* Share — copy and redistribute the material in any medium or format 
+* Adapt — remix, transform, and build upon the material for any purpose, even commercially. 
+
+Under the following terms:
+* You must give appropriate credit (attribution) to Met Éireann as outlined below, provide a link to the licence, and indicate if changes were made. 
+* No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits."
+61
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Malsfeld ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+60
+"Sin limitaciones de acceso público."@es
+60
+"Nutzungsbedingungen WICHTIGE HINWEISE: Bei der Veröffentlichung der Bauleitpläne der Stadt Pirmasens im geoportal rlp handelt es sich um ein unverbindliches zusätzliches Informationsangebot der Stadtverwaltung Pirmasens. Für dessen Richtigkeit/Genauigkeit, Aktualität und Vollständigkeit wird von der Stadt Pirmasens keine Haftung oder Gewährleistung übernommen. Die Stadt haftet nicht für Schäden oder Verluste, welche durch die direkte oder indirekte Nutzung entstehen. Die Datennutzung aus der Onlineanwendung erfolgt auf eigenes Risiko und ausschließlich für nicht kommerzielle Zwecke. Eine Weiterverwendung der Inhalte, Veröffentlichung, Verkauf oder die Erstellung abgeleiteter Planungen bedarf der schriftlichen Einwilligung der Stadt Pirmasens. Rechtlich verbindlich sind ausschließlich die originalen Bebauungspläne, die in den Räumen der Stadtverwaltung Pirmasens-Stadtplanung, Schützenstraße 16, 66953 Pirmasens, eingesehen werden können. Insbesondere treffen die Online-Daten keine rechtsverbindliche Aussage über die Zulässigkeit eventueller Bauvorhaben und Nutzungen. Daher wird ausdrücklich empfohlen, vor Entscheidungen und besonders vor vermögenswirksamen Dispositionen (z.B. Grundstücksverträge) eine schriftliche Auskunft zu der im jeweiligen Einzelfall beabsichtigten Baumaßnahme bzw. Nutzung (z.B. im Wege einer Bauvoranfrage) oder eine Baugenehmigung einzuholen. Für ergänzende Beratung und Erläuterungen der Bauleitpläne stehen die Mitarbeiter/innen der Stadtplanung während der Öffnungszeiten sowie nach telefonischer Terminvereinbarung zur Verfügung."@de
+59
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Böhl-Iggelheim, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Böhl-Iggelheim ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+59
+"En dépit des efforts et diligences mis en œuvre pour en vérifier la fiabilité, le fournisseur n’est pas en mesure de garantir l’exactitude, la mise à jour, l’intégrité, l’exhaustivité des données et en particulier que les données sont exemptes d'erreurs, notamment de localisation, d’identification ou d’actualisation ou d’imprécisions. Les données ne sont pas fournies en vue d'une utilisation particulière et aucune garantie quant à leur aptitude à un usage particulier n'est apportée par le fournisseur. En conséquence, les utilisateurs utilisent les données sous leur responsabilité pleine et entière, à leurs risques et périls, sans recours possible contre le fournisseur dont la responsabilité ne saurait être engagée du fait d’un dommage résultant directement ou indirectement de l’utilisation de ces données. En particulier, il appartient aux utilisateurs d’apprécier, sous leur seule responsabilité : – l'opportunité d'utiliser les données ; – la compatibilité des fichiers avec leurs systèmes informatiques ; – l’adéquation des données à leurs besoins ; – qu’ils disposent de la compétence suffisante pour utiliser les données ; – l’opportunité d’utiliser la documentation ou les outils d’analyse fournis ou préconisés, en relation avec l’utilisation des données, le cas échéant. Le fournisseur n’est en aucune façon responsable des éléments extérieurs aux données et notamment des outils d’analyse, matériels, logiciels, réseaux..., utilisés pour consulter et/ou traiter les données, même s’il a préconisé ces éléments. L’utilisateur veille à vérifier que l’actualité des informations mises à disposition est compatible avec l’usage qu’il en fait."@fr
+59
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Wabern ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+58
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Guxhagen ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+58
+"Licenza IODL 2.0 - link: http://www.dati.gov.it/iodl/2.0/"@it
+57
+"NONE"@de
+56
+"keine Angaben"@de
+56
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Spangenberg ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+56
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Hauneck ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+56
+"CC BY 4.0 https://www.ign.es"@es
+56
+"no limitations"@et
+56
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Bebra ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+55
+"Die Bodenrichtwerte (Bodenrichtwertkarte und beschreibende Merkmale der Bodenrichtwerte) sind urheberrechtlich geschützt. Vervielfältigung, Veränderung, Veröffentlichung oder die Weitergabe an Dritte bedürfen der Zustimmung des Herausgebers. Einer Zustimmung des Oberen Gutachterausschusses bedarf es nicht, wenn 1. die Bodenrichtwerte an Dritte weitergegeben werden und mit der Weitergabe keine unmittelbare oder mittelbare Vermarktung der Bodenrichtwerte verfolgt wird oder 2. die Bodenrichtwerte im Rahmen von Verkehrswertgutachten über unbebaute und bebaute Grundstücke an Antragsberechtigte entsprechend § 193 Baugesetzbuch weitergegeben werden oder 3. die Verkehrswertgutachten im Rahmen von Zwangsversteigerungsverfahren der Amtsgerichte im Internet veröffentlicht werden sollen. - Vervielfältigungen und Veröffentlichungen sind mit einem Herkunfts- und Aktualitätsvermerk zu versehen der mindestens folgende Angaben enthalten soll: Datengrundlage: Bodenrichtwerte der Gutachterausschüsse der Grundstückswerte in Rheinland-Pfalz, Wertermittlungsstichtag der Bodenrichtwerte 01.01.2016 und bei Veröffentlichungen zusätzlich Veröffentlichung durch (verwendende Person oder Stelle). Es gelten die Vorschriften der VV ÜbermittlungGeobasis sinngemäß. Weitere Informationen unter https://gutachterausschuesse.rlp.de/fileadmin/gutachterausschuesse.rlp.de/pdf/info_hilfe_boris_rlp.pdf"@de
+55
+"Die Bodenrichtwerte (Bodenrichtwertkarte und beschreibende Merkmale der Bodenrichtwerte) sind urheberrechtlich geschützt. Vervielfältigung, Veränderung, Veröffentlichung oder die Weitergabe an Dritte bedürfen der Zustimmung des Herausgebers. Einer Zustimmung des Oberen Gutachterausschusses bedarf es nicht, wenn 1. die Bodenrichtwerte an Dritte weitergegeben werden und mit der Weitergabe keine unmittelbare oder mittelbare Vermarktung der Bodenrichtwerte verfolgt wird oder 2. die Bodenrichtwerte im Rahmen von Verkehrswertgutachten über unbebaute und bebaute Grundstücke an Antragsberechtigte entsprechend § 193 Baugesetzbuch weitergegeben werden oder 3. die Verkehrswertgutachten im Rahmen von Zwangsversteigerungsverfahren der Amtsgerichte im Internet veröffentlicht werden sollen. - Vervielfältigungen und Veröffentlichungen sind mit einem Herkunfts- und Aktualitätsvermerk zu versehen der mindestens folgende Angaben enthalten soll: Datengrundlage: Bodenrichtwerte der Gutachterausschüsse der Grundstückswerte in Rheinland-Pfalz, Wertermittlungsstichtag der Bodenrichtwerte 01.01.2014 und bei Veröffentlichungen zusätzlich Veröffentlichung durch (verwendende Person oder Stelle). Es gelten die Vorschriften der VV ÜbermittlungGeobasis sinngemäß. Weitere Informationen unter https://gutachterausschuesse.rlp.de/fileadmin/gutachterausschuesse.rlp.de/pdf/info_hilfe_boris_rlp.pdf"@de
+55
+"Die Bodenrichtwerte (Bodenrichtwertkarte und beschreibende Merkmale der Bodenrichtwerte) sind urheberrechtlich geschützt. Vervielfältigung, Veränderung, Veröffentlichung oder die Weitergabe an Dritte bedürfen der Zustimmung des Herausgebers. Einer Zustimmung des Oberen Gutachterausschusses bedarf es nicht, wenn 1. die Bodenrichtwerte an Dritte weitergegeben werden und mit der Weitergabe keine unmittelbare oder mittelbare Vermarktung der Bodenrichtwerte verfolgt wird oder 2. die Bodenrichtwerte im Rahmen von Verkehrswertgutachten über unbebaute und bebaute Grundstücke an Antragsberechtigte entsprechend § 193 Baugesetzbuch weitergegeben werden oder 3. die Verkehrswertgutachten im Rahmen von Zwangsversteigerungsverfahren der Amtsgerichte im Internet veröffentlicht werden sollen. - Vervielfältigungen und Veröffentlichungen sind mit einem Herkunfts- und Aktualitätsvermerk zu versehen der mindestens folgende Angaben enthalten soll: Datengrundlage: Bodenrichtwerte der Gutachterausschüsse der Grundstückswerte in Rheinland-Pfalz, Wertermittlungsstichtag der Bodenrichtwerte 01.01.2018 und bei Veröffentlichungen zusätzlich Veröffentlichung durch (verwendende Person oder Stelle). Es gelten die Vorschriften der VV ÜbermittlungGeobasis sinngemäß. Weitere Informationen unter https://gutachterausschuesse.rlp.de/fileadmin/gutachterausschuesse.rlp.de/pdf/info_hilfe_boris_rlp.pdf"@de
+55
+"(e) intellectual property rights;"@en
+55
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Gemeinde Feldatal ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die Gemeinde Feldatal. Es besteht kein Anspruch auf Vollständigkeit."@de
+55
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Waldeck ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+55
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Waldkappel ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+55
+"none"
+55
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Borken ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an die untere Bauaufsichtsbehörde. Es besteht kein Anspruch auf Vollständigkeit."@de
+54
+"Die Bodenrichtwerte (Bodenrichtwertkarte und beschreibende Merkmale der Bodenrichtwerte) sind urheberrechtlich geschützt. Vervielfältigung, Veränderung, Veröffentlichung oder die Weitergabe an Dritte bedürfen der Zustimmung des Herausgebers. Einer Zustimmung des Oberen Gutachterausschusses bedarf es nicht, wenn 1. die Bodenrichtwerte an Dritte weitergegeben werden und mit der Weitergabe keine unmittelbare oder mittelbare Vermarktung der Bodenrichtwerte verfolgt wird oder 2. die Bodenrichtwerte im Rahmen von Verkehrswertgutachten über unbebaute und bebaute Grundstücke an Antragsberechtigte entsprechend §167; 193 Baugesetzbuch weitergegeben werden oder 3. die Verkehrswertgutachten im Rahmen von Zwangsversteigerungsverfahren der Amtsgerichte im Internet veröffentlicht werden sollen. - Vervielfältigungen und Veröffentlichungen sind mit einem Herkunfts- und Aktualitätsvermerk zu versehen der mindestens folgende Angaben enthalten soll: Datengrundlage: Bodenrichtwerte der Gutachterausschüsse der Grundstückswerte in Rheinland-Pfalz, Wertermittlungsstichtag der Bodenrichtwerte 01.01.2012 und bei Veröffentlichungen zusätzlich Veröffentlichung durch (verwendende Person oder Stelle). Es gelten die Vorschriften der VV-ÜbermittlungGeobasis sinngemäß. Weitere Informationen unter http://www.gutachterausschuesse.rlp.de/lv/pdf/premiumdienst.pdf"@de
+54
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Wanfried ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+53
+"Saemtliche Rechte an diesem Dienst liegen der Gemeinde Eppelborn."@de
+53
+"{"id": "dl-de-by-2.0", "name": "Datenlizenz Deutschland Namensnennung 2.0", "url": "https://www.govdata.de/dl-de/by-2-0", "quelle": "Quelle: Land NRW Jahr"}"@de
+52
+"{"id":"cc-by-4.0",  "name": "Creative Commons Attribution 4.0", "url": "https://creativecommons.org/licenses/by/4.0/legalcode.de", "quelle": "Datenquelle: CC‐BY‐4.0 ‐ Stadt Wuppertal ‐ offenedaten‐wuppertal.de"}"@de
+52
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Sontra ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Gemeinde bzw. Stadt oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+52
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Frankenau ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+52
+"Saemtliche Rechte an diesem Dienst liegen bei der Gemeinde Bous."@de
+52
+"andere Beschränkungen - Die Nutzung ohne vertragliche Vereinbarung mit der Stadt Lichtenfels ist nur für nicht kommerzielle Zwecke erlaubt. Die Daten dienen der Orientierung. Für rechtsverbindliche Auskünfte wenden Sie sich bitte an die zuständige Stadt bzw. Gemeinde oder an das Kreisbauamt. Es besteht kein Anspruch auf Vollständigkeit."@de
+52
+"Nutzungsbedingungen: Sämtliche Rechte an diesem Dienst liegen bei der Gemeinde Neuhofen, Rheinland-Pfalz. Das Anschauen ("Viewing") in der Online-Anwendungen GeoPortal.rlp ist kostenfrei. Jede darüber hinaus gehende Nutzung, so auch das Einbinden in weitere Anwendungen bedarf einer vertraglichen Grundlage. Die kommerzielle Nutzung ohne vertragliche Grundlage mit der Gemeinde Neuhofen ist ausdrücklich ausgeschlossen. Eine systematische Nutzung des Produktes, welche darauf ausgerichtet ist, einen Sekundärdatenbestand zu erstellen, ist ausdrücklich untersagt."@de
+52
+"Die Nutzung der Daten ist mit Quellenhinweis gestattet. Für die Nutzung der Daten werden keine Gebühren erhoben. Es wird keine Gewähr für die Richtigkeit und Vollständigkeit der Daten übernommen. Eine Haftung für Schäden aller Art aus der Überlassung und Weiterverarbeitung der Daten ist ausgeschlossen. Rechtliche Hinweise finden Sie auf den Themenseiten des Landesplanungsportals unter LEP und REGIONALPLÄNE."@de
+52
+"Bedingungen unbekannt"@de
+50

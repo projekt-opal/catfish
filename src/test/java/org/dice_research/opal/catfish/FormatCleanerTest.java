@@ -3,6 +3,9 @@ package org.dice_research.opal.catfish;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
+import org.apache.jena.vocabulary.DCAT;
+import org.apache.jena.vocabulary.RDF;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
 import org.junit.Assert;
@@ -67,6 +70,37 @@ public class FormatCleanerTest {
 		// Manual checks
 		if (Boolean.FALSE) {
 			testModel.write(System.out, "TURTLE");
+		}
+	}
+
+	@Test
+	public void testDownloadUrl() throws Exception {
+
+		Model model = ModelFactory.createDefaultModel();
+		Resource dataset = ResourceFactory.createResource("http://example.com/dataset");
+		Resource distribution = ResourceFactory.createResource("http://example.com/distribution");
+
+		model.add(dataset, RDF.type, DCAT.Dataset);
+
+		model.add(distribution, RDF.type, DCAT.Distribution);
+		model.add(dataset, DCAT.distribution, distribution);
+
+		model.add(distribution, DCAT.downloadURL,
+				ResourceFactory.createPlainLiteral("http://example.com/download.php"));
+		model.add(distribution, DCAT.downloadURL,
+				ResourceFactory.createPlainLiteral("http://example.com/download.get?something=true"));
+		model.add(distribution, DCAT.downloadURL,
+				ResourceFactory.createPlainLiteral("http://example.com/download.php/dataset.xml"));
+
+		long originalSize = model.size();
+		new FormatCleaner().clean(model, dataset);
+
+		// XML: downloadURL and type
+		Assert.assertEquals("XML format", originalSize + 2, model.size());
+
+		// Manual checks
+		if (Boolean.FALSE) {
+			model.write(System.out, "TURTLE");
 		}
 	}
 
