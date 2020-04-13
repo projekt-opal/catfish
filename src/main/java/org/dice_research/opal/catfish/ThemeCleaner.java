@@ -7,19 +7,13 @@ import org.apache.jena.vocabulary.RDF;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class ThemeCleaner implements Cleaner {
 
     private static final Logger logger = LoggerFactory.getLogger(ThemeCleaner.class);
 
-    private String[] themes = new String[]{
+    private final String[] themes = new String[]{
             "http://publications.europa.eu/resource/authority/data-theme/AGRI",
             "http://publications.europa.eu/resource/authority/data-theme/EDUC",
             "http://publications.europa.eu/resource/authority/data-theme/ENVI",
@@ -36,25 +30,6 @@ public class ThemeCleaner implements Cleaner {
             "http://publications.europa.eu/resource/authority/data-theme/OP_DATPRO"
     };
 
-//    public static void main(String[] args) {
-//        Path dir = Paths.get("/home/afshin/Downloads/edp_19-03-2019/edp");
-//        try {
-//            Stream<Path> list = Files.list(dir);
-//            ThemeCleaner themeCleaner = new ThemeCleaner();
-//            list.forEach(file -> {
-//                try {
-//                    Model model = ModelFactory.createDefaultModel();
-//                    model.read(file.toString());
-//                    model.write(new FileOutputStream("/home/afshin/Desktop/dataset.ttl"), "TURTLE");
-//                    themeCleaner.clean(model);
-//                } catch (Exception e) {
-//                    System.out.println("error");
-//                }
-//            });
-//        } catch (IOException e) {
-//            logger.error("", e);
-//        }
-//    }
 
     @Override
     public void clean(Model model) {
