@@ -1,6 +1,9 @@
 package org.dice_research.opal.catfish;
 
-import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.Literal;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Statement;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +33,7 @@ public class LiteralCleaner implements Cleaner {
 
 abstract class LiteralByRegexCleaner {
 
-//    private static final Logger logger = LoggerFactory.getLogger(LiteralByRegexCleaner.class);
+    //    private static final Logger logger = LoggerFactory.getLogger(LiteralByRegexCleaner.class);
     private final String regex;
 
     protected LiteralByRegexCleaner(String regex) {
@@ -43,7 +46,7 @@ abstract class LiteralByRegexCleaner {
             if (object.isLiteral()) {
                 Literal literal = object.asLiteral();
                 String value = literal.getString();
-    //            if (value.charAt(0) != '"' || value.charAt(value.length() - 1) != '"') return;
+                //            if (value.charAt(0) != '"' || value.charAt(value.length() - 1) != '"') return;
                 Pattern pattern = Pattern.compile(regex);
                 Matcher m = pattern.matcher(value);
                 if (m.find()) {
@@ -77,7 +80,7 @@ class LanguageByRegexCleaner extends LiteralByRegexCleaner {
 class DataTypeByRegexCleaner extends LiteralByRegexCleaner {
 
     DataTypeByRegexCleaner() {
-        super("\"(.*)\"\\^\\^(.*)");
+        super("\"(.*)\"\\^\\^(.*:.*)");
     }
 
     @Override
