@@ -4,6 +4,8 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Statement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +14,7 @@ import java.util.regex.Pattern;
 
 public class LiteralCleaner implements Cleaner {
 
-//    private static final Logger logger = LoggerFactory.getLogger(LiteralCleaner.class);
+    private static final Logger logger = LoggerFactory.getLogger(LiteralCleaner.class);
 
     private final List<LiteralByRegexCleaner> regexCleaners =
             Arrays.asList(new LanguageByRegexCleaner(), new DataTypeByRegexCleaner());
@@ -24,8 +26,7 @@ public class LiteralCleaner implements Cleaner {
             statements.forEach(statement ->
                     regexCleaners.forEach(byRegexCleaner -> byRegexCleaner.cleanByRegex(model, statement)));
         } catch (Exception e) {
-            e.printStackTrace();
-//            logger.error("Error in cleaning literals", e);
+            logger.error("Error in cleaning literals", e);
         }
     }
 }
@@ -33,7 +34,7 @@ public class LiteralCleaner implements Cleaner {
 
 abstract class LiteralByRegexCleaner {
 
-    //    private static final Logger logger = LoggerFactory.getLogger(LiteralByRegexCleaner.class);
+    private static final Logger logger = LoggerFactory.getLogger(LiteralByRegexCleaner.class);
     private final String regex;
 
     protected LiteralByRegexCleaner(String regex) {
@@ -56,8 +57,7 @@ abstract class LiteralByRegexCleaner {
                 }
             }
         } catch (Exception e) {
-//            logger.error("error in cleaning by regex", e);
-            e.printStackTrace();
+            logger.error("Error in cleaning by regex", e);
         }
 
     }
