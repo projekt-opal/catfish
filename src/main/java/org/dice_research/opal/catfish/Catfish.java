@@ -1,6 +1,10 @@
 package org.dice_research.opal.catfish;
 
 import org.apache.jena.rdf.model.Model;
+import org.dice_research.opal.catfish.service.impl.FormatCleaner;
+import org.dice_research.opal.catfish.service.impl.LiteralCleaner;
+import org.dice_research.opal.catfish.service.impl.StructuralCleaner;
+import org.dice_research.opal.catfish.service.impl.ThemeCleaner;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
@@ -16,6 +20,7 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
     private boolean removeEmptyLiterals = true;
     private boolean cleanFormats = true;
     private boolean cleanThemes = true;
+    private boolean cleanLiterals = true;
 
     @Override
     public void processModel(Model model, String datasetUri) {
@@ -32,6 +37,9 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
         if(cleanThemes) // TODO: 4/1/20 Make an array of Cleaner interface, and call them in a row
             new ThemeCleaner().clean(model);
+
+        if(cleanThemes) // TODO: 4/1/20 Make an array of Cleaner interface, and call them in a row
+            new LiteralCleaner().clean(model);
 
     }
 

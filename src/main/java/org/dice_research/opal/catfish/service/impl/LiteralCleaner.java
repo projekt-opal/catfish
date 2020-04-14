@@ -1,9 +1,10 @@
-package org.dice_research.opal.catfish;
+package org.dice_research.opal.catfish.service.impl;
 
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Statement;
+import org.dice_research.opal.catfish.service.Cleanable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LiteralCleaner implements Cleaner {
+public class LiteralCleaner implements Cleanable {
 
     private static final Logger logger = LoggerFactory.getLogger(LiteralCleaner.class);
 

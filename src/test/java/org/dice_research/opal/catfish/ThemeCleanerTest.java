@@ -3,6 +3,7 @@ package org.dice_research.opal.catfish;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.vocabulary.DCAT;
+import org.dice_research.opal.catfish.service.impl.ThemeCleaner;
 import org.junit.Assert;
 import org.junit.Test;
 

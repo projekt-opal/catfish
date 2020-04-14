@@ -1,15 +1,16 @@
-package org.dice_research.opal.catfish;
+package org.dice_research.opal.catfish.service.impl;
 
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.rdf.model.impl.StatementImpl;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.RDF;
+import org.dice_research.opal.catfish.service.Cleanable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
-public class ThemeCleaner implements Cleaner {
+public class ThemeCleaner implements Cleanable {
 
     private static final Logger logger = LoggerFactory.getLogger(ThemeCleaner.class);
 
