@@ -18,7 +18,8 @@ public class LiteralCleaner implements Cleanable {
     private static final Logger logger = LoggerFactory.getLogger(LiteralCleaner.class);
 
     private final List<LiteralByRegexCleaner> regexCleaners =
-            Arrays.asList(new LanguageByRegexCleaner(), new DataTypeByRegexCleaner());
+            Arrays.asList(new LanguageByRegexCleaner(), new DataTypeByRegexCleaner(),
+                    new NonReadableAndEmptyLiterByRegexCleaner());
 
     @Override
     public void clean(Model model) {
@@ -47,14 +48,15 @@ abstract class LiteralByRegexCleaner {
             RDFNode object = statement.getObject();
             if (object.isLiteral()) {
                 Literal literal = object.asLiteral();
-                String value = literal.getString();
-                //            if (value.charAt(0) != '"' || value.charAt(value.length() - 1) != '"') return;
+                String value = literal.getString().trim();
                 Pattern pattern = Pattern.compile(regex);
                 Matcher m = pattern.matcher(value);
                 if (m.find()) {
-                    Literal modelLiteral = createNewLiteral(model, m.group(1), m.group(2));
                     model.remove(statement);
-                    model.add(statement.getSubject(), statement.getPredicate(), modelLiteral);
+                    if (m.groupCount() > 1) {
+                        Literal modelLiteral = createNewLiteral(model, m.group(1), m.group(2));
+                        model.add(statement.getSubject(), statement.getPredicate(), modelLiteral);
+                    }
                 }
             }
         } catch (Exception e) {
@@ -87,5 +89,18 @@ class DataTypeByRegexCleaner extends LiteralByRegexCleaner {
     @Override
     Literal createNewLiteral(Model model, String g1, String g2) {
         return model.createTypedLiteral(g1, g2);
+    }
+}
+
+class NonReadableAndEmptyLiterByRegexCleaner extends LiteralByRegexCleaner {
+
+
+    protected NonReadableAndEmptyLiterByRegexCleaner() {
+        super("^[^a-zA-Z0-9]*$");
+    }
+
+    @Override
+    Literal createNewLiteral(Model model, String g1, String g2) {
+        return null;
     }
 }

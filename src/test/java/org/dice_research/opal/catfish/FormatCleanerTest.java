@@ -7,6 +7,7 @@ import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.RDF;
 import org.dice_research.opal.catfish.service.impl.FormatCleaner;
+import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
 import org.junit.Assert;
@@ -34,25 +35,15 @@ public class FormatCleanerTest {
         testCaseA = OpalTestCases.getTestCase("edp-2019-12-17", "med-kodierungshandbuch");
     }
 
-    Model getModelCopy(TestCase testCase) {
-        Model model = ModelFactory.createDefaultModel();
-        model.add(testCase.getModel());
-        return model;
-    }
-
     @Test
-    public void test() throws Exception {
+    public void test() {
         Model testModel;
-        String testDatasetUri;
-        Resource testDataset;
 
         // Direct FormatCleaner test
 
-        testModel = getModelCopy(testCaseA);
-        testDatasetUri = testCaseA.getDatasetUri();
-        testDataset = testModel.getResource(testDatasetUri);
+        testModel = JenaModelUtilities.getModelCopy(testCaseA.getModel());
 
-        new FormatCleaner().clean(testModel, testDataset);
+        new FormatCleaner().clean(testModel);
 
         // 6 triples for formats of 6 distributions (3xhtml, 3xpdf)
         // 2 triples for types of formats (html, pdf)
@@ -60,12 +51,9 @@ public class FormatCleanerTest {
 
         // Catfish test
 
-        testModel = getModelCopy(testCaseA);
-        testDatasetUri = testCaseA.getDatasetUri();
-        testDataset = testModel.getResource(testDatasetUri);
+        testModel = JenaModelUtilities.getModelCopy(testCaseA.getModel());
 
-        new Catfish().cleanFormats(true).removeEmptyBlankNodes(false).removeEmptyLiterals(false).processModel(testModel,
-                testDatasetUri);
+        new FormatCleaner().clean(testModel);
         Assert.assertEquals("8 additional format triples", testCaseA.getModel().size() + 6 + 2, testModel.size());
 
         // Manual checks
@@ -75,7 +63,7 @@ public class FormatCleanerTest {
     }
 
     @Test
-    public void testDownloadUrl() throws Exception {
+    public void testDownloadUrl() {
 
         Model model = ModelFactory.createDefaultModel();
         Resource dataset = ResourceFactory.createResource("http://example.com/dataset");
@@ -94,7 +82,7 @@ public class FormatCleanerTest {
                 ResourceFactory.createPlainLiteral("http://example.com/download.php/dataset.xml"));
 
         long originalSize = model.size();
-        new FormatCleaner().clean(model, dataset);
+        new FormatCleaner().clean(model);
 
         // XML: downloadURL and type
         Assert.assertEquals("XML format", originalSize + 2, model.size());
