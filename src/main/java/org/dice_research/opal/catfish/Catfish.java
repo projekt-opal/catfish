@@ -1,69 +1,64 @@
 package org.dice_research.opal.catfish;
 
 import org.apache.jena.rdf.model.Model;
+import org.dice_research.opal.catfish.config.CleaningConfig;
+import org.dice_research.opal.catfish.service.Cleanable;
+import org.dice_research.opal.catfish.service.impl.EmptyBlankNodeCleaner;
+import org.dice_research.opal.catfish.service.impl.FormatCleaner;
+import org.dice_research.opal.catfish.service.impl.LiteralCleaner;
+import org.dice_research.opal.catfish.service.impl.ThemeCleaner;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * OPAL RDF and DCAT cleaning component.
- * 
+ *
  * @author Adrian Wilke
  */
 @SuppressWarnings("deprecation")
 public class Catfish implements ModelProcessor, JenaModelProcessor {
 
-	private boolean removeEmptyBlankNodes = true;
-	private boolean removeEmptyLiterals = true;
-	private boolean cleanFormats = true;
+    private final CleaningConfig cleaningConfig;
 
-	@Override
-	public void processModel(Model model, String datasetUri) {
+    public Catfish(CleaningConfig cleaningConfig) {
+        this.cleaningConfig = cleaningConfig == null ? new CleaningConfig() : cleaningConfig;
+    }
 
-		// Clean structural contents, e.g. empty values
-		if (isRemovingEmptyBlankNodes() || isRemovingEmptyLiterals()) {
-			new StructuralCleaner(this).clean(model);
-		}
+    private List<Cleanable> getCleaners() {
+        List<Cleanable> ret = new ArrayList<>();
+        if (cleaningConfig.isCleanEmptyBlankNodes())
+            ret.add(new EmptyBlankNodeCleaner());
+        if (cleaningConfig.isCleanFormats())
+            ret.add(new FormatCleaner());
+        if (cleaningConfig.isCleanLiterals())
+            ret.add(new LiteralCleaner());
+        if (cleaningConfig.isCleanThemes())
+            ret.add(new ThemeCleaner());
+        return ret;
+    }
 
-		// Clean formats and mediaTypes
-		if (isCleaningFormats()) {
-			new FormatCleaner().clean(model, model.getResource(datasetUri));
-		}
-	}
 
-	public boolean isRemovingEmptyBlankNodes() {
-		return removeEmptyBlankNodes;
-	}
+    /**
+     * @param model Apache Jena Model that needs to be cleaned
+     * @param datasetUri unused
+     */
+    @Override
 
-	public boolean isRemovingEmptyLiterals() {
-		return removeEmptyLiterals;
-	}
+    public void processModel(Model model, String datasetUri) {
+        List<Cleanable> cleaners = getCleaners();
+        cleaners.forEach(cleaner -> cleaner.clean(model));
+    }
 
-	public boolean isCleaningFormats() {
-		return cleanFormats;
-	}
-
-	public Catfish removeEmptyBlankNodes(boolean removeEmptyBlankNodes) {
-		this.removeEmptyBlankNodes = removeEmptyBlankNodes;
-		return this;
-	}
-
-	public Catfish removeEmptyLiterals(boolean removeEmptyLiterals) {
-		this.removeEmptyLiterals = removeEmptyLiterals;
-		return this;
-	}
-
-	public Catfish cleanFormats(boolean cleanFormats) {
-		this.cleanFormats = cleanFormats;
-		return this;
-	}
-
-	/**
-	 * @deprecated Replaced by {@link #processModel(Model, String)}.
-	 */
-	@Deprecated
-	@Override
-	public Model process(Model model, String datasetUri) throws Exception {
-		processModel(model, datasetUri);
-		return model;
-	}
+    /**
+     * @deprecated Replaced by {@link #processModel(Model, String)}.
+     */
+    @Deprecated
+    @Override
+    public Model process(Model model, String datasetUri) {
+        processModel(model, datasetUri);
+        return model;
+    }
 }
