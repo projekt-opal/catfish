@@ -70,6 +70,19 @@ abstract class LiteralByRegexCleaner {
 
 class LanguageByRegexCleaner extends LiteralByRegexCleaner {
 
+
+    /**
+     * It will select strings that have @ and 2 characters in the end of the string
+     * description of regex from regex101.com:
+     ** " matches the character " literally (case sensitive)
+     ** 1st Capturing Group (.*)
+     ** .* matches any character (except for line terminators)
+     ** * Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+     ** "@ matches the characters "@ literally (case sensitive)
+     ** 2nd Capturing Group (..)
+     ** . matches any character (except for line terminators)
+     ** . matches any character (except for line terminators)
+     */
     LanguageByRegexCleaner() {
         super("\"(.*)\"@(..)");
     }
@@ -82,6 +95,23 @@ class LanguageByRegexCleaner extends LiteralByRegexCleaner {
 
 class DataTypeByRegexCleaner extends LiteralByRegexCleaner {
 
+    /**
+     * It will select string that has a dcat datatype in the end which started with ^^ then has a prefix and
+     * then : in between, for something like ^^xsd:string or ^^http://www.w3.org/2001/XMLSchema#string
+     * description of regex from regex101.com:
+     ** " matches the character " literally (case sensitive)
+     ** 1st Capturing Group (.*)
+     ** .* matches any character (except for line terminators)
+     ** * Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+     ** " matches the character " literally (case sensitive)
+     ** \^ matches the character ^ literally (case sensitive)
+     ** \^ matches the character ^ literally (case sensitive)
+     ** 2nd Capturing Group (.*:.*)
+     ** .* matches any character (except for line terminators)
+     ** * Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+     ** : matches the character : literally (case sensitive)
+     ** .* matches any character (except for line terminators)
+     */
     DataTypeByRegexCleaner() {
         super("\"(.*)\"\\^\\^(.*:.*)");
     }
@@ -95,6 +125,18 @@ class DataTypeByRegexCleaner extends LiteralByRegexCleaner {
 class NonReadableAndEmptyLiterByRegexCleaner extends LiteralByRegexCleaner {
 
 
+    /**
+     * It checks any string that does not have any character or number.
+     * Example: "@#$%" or empty string
+     * description of regex from regex101.com:
+     ** ^ asserts position at start of a line
+     ** Match a single character not present in the list below [^a-zA-Z0-9]*
+     ** * Quantifier — Matches between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+     ** a-z a single character in the range between a (index 97) and z (index 122) (case sensitive)
+     ** A-Z a single character in the range between A (index 65) and Z (index 90) (case sensitive)
+     ** 0-9 a single character in the range between 0 (index 48) and 9 (index 57) (case sensitive)
+     ** $ asserts position at the end of a line
+     */
     protected NonReadableAndEmptyLiterByRegexCleaner() {
         super("^[^a-zA-Z0-9]*$");
     }
