@@ -62,17 +62,18 @@ public class ThemeCleaner implements Cleanable {
         if (!node.isResource()) return null;
         Set<Statement> toBeAdded = new HashSet<>();
         model.remove(dataSet, DCAT.theme, node);
-        StmtIterator stmtIterator = model.listStatements(new SimpleSelector(node.asResource(), null, (RDFNode) null));
-        while (stmtIterator.hasNext()) {
-            Statement statement = stmtIterator.nextStatement();
+        List<Statement> statements = model.listStatements(new SimpleSelector(node.asResource(), null, (RDFNode) null)).toList();
+        statements.forEach(statement -> {
             RDFNode object = statement.getObject();
             if (Arrays.stream(themes).anyMatch(s -> s.equals(object.toString())))
                 toBeAdded.add(new StatementImpl(dataSet, DCAT.theme, object));
             else {
-                model.remove(statement.getSubject(), statement.getPredicate(), object);
-                cleanThemeGraphRecursively(model, dataSet, object);
+                if(model.contains(statement)) { // to prevent infinite loop if there is a loop in the graph
+                    model.remove(statement.getSubject(), statement.getPredicate(), object);
+                    cleanThemeGraphRecursively(model, dataSet, object);
+                }
             }
-        }
+        });
         return toBeAdded;
     }
 
