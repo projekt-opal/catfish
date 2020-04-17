@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish;
+package org.dice_research.opal.catfish.service;
 
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;

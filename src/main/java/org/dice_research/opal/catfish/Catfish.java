@@ -42,7 +42,7 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 
     /**
-     * @param model Apache Jena Model that needs to be cleaned
+     * @param model      Apache Jena Model that needs to be cleaned
      * @param datasetUri unused
      */
     @Override
