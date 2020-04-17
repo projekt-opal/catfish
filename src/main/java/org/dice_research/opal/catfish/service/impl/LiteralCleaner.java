@@ -24,9 +24,10 @@ public class LiteralCleaner implements Cleanable {
     @Override
     public void clean(Model model) {
         try {
-            List<Statement> statements = model.listStatements().toList();
-            statements.forEach(statement ->
-                    regexCleaners.forEach(byRegexCleaner -> byRegexCleaner.cleanByRegex(model, statement)));
+            regexCleaners.forEach(byRegexCleaner -> {
+                List<Statement> statements = model.listStatements().toList();
+                statements.forEach(statement -> byRegexCleaner.cleanByRegex(model, statement));
+            });
         } catch (Exception e) {
             logger.error("Error in cleaning literals", e);
         }
