@@ -9,6 +9,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 		FormatCleanerTest.class,
 
+		LiteralCleanerTest.class,
+
 		StructuralCleanerTest.class
 
 })

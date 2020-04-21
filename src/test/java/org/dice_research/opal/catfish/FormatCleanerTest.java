@@ -65,12 +65,19 @@ public class FormatCleanerTest {
 
 		new Catfish().cleanFormats(true).removeEmptyBlankNodes(false).removeEmptyLiterals(false).processModel(testModel,
 				testDatasetUri);
-		Assert.assertEquals("8 additional format triples", testCaseA.getModel().size() + 6 + 2, testModel.size());
 
 		// Manual checks
 		if (Boolean.FALSE) {
 			testModel.write(System.out, "TURTLE");
+
+			System.out.println("testCaseA - testModel");
+			testCaseA.getModel().difference(testModel).write(System.out, "TURTLE");
+
+			System.out.println("testModel - testCaseA");
+			testModel.difference(testCaseA.getModel()).write(System.out, "TURTLE");
 		}
+
+		Assert.assertEquals("8 additional format triples", testCaseA.getModel().size() + 6 + 2, testModel.size());
 	}
 
 	@Test
