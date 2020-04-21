@@ -6,7 +6,6 @@ import org.dice_research.opal.catfish.service.Cleanable;
 import org.dice_research.opal.catfish.service.impl.EmptyBlankNodeCleaner;
 import org.dice_research.opal.catfish.service.impl.FormatCleaner;
 import org.dice_research.opal.catfish.service.impl.LiteralCleaner;
-import org.dice_research.opal.catfish.service.impl.ThemeCleaner;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
@@ -35,8 +34,6 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
             ret.add(new FormatCleaner());
         if (cleaningConfig.isCleanLiterals())
             ret.add(new LiteralCleaner());
-        if (cleaningConfig.isCleanThemes())
-            ret.add(new ThemeCleaner());
         return ret;
     }
 

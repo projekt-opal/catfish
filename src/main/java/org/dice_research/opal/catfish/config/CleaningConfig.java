@@ -3,7 +3,6 @@ package org.dice_research.opal.catfish.config;
 public class CleaningConfig {
     private boolean cleanEmptyBlankNodes = true;
     private boolean cleanFormats = true;
-    private boolean cleanThemes = true;
     private boolean cleanLiterals = true;
 
     public boolean isCleanEmptyBlankNodes() {
@@ -21,15 +20,6 @@ public class CleaningConfig {
 
     public CleaningConfig setCleanFormats(boolean cleanFormats) {
         this.cleanFormats = cleanFormats;
-        return this;
-    }
-
-    public boolean isCleanThemes() {
-        return cleanThemes;
-    }
-
-    public CleaningConfig setCleanThemes(boolean cleanThemes) {
-        this.cleanThemes = cleanThemes;
         return this;
     }
 

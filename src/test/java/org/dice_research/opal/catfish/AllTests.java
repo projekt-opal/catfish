@@ -3,7 +3,6 @@ package org.dice_research.opal.catfish;
 import org.dice_research.opal.catfish.service.EmptyBlankNodeCleanerTest;
 import org.dice_research.opal.catfish.service.FormatCleanerTest;
 import org.dice_research.opal.catfish.service.LiteralCleanerTest;
-import org.dice_research.opal.catfish.service.ThemeCleanerTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -11,15 +10,13 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 
-		FormatCleanerTest.class,
+        FormatCleanerTest.class,
 
-		EmptyBlankNodeCleanerTest.class,
+        EmptyBlankNodeCleanerTest.class,
 
-		ThemeCleanerTest.class,
+        LiteralCleanerTest.class,
 
-		LiteralCleanerTest.class,
-
-		CatfishTest.class
+        CatfishTest.class
 
 })
 public class AllTests {

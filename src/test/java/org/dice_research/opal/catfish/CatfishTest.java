@@ -24,7 +24,7 @@ public class CatfishTest {
     @Test
     public void testGivenModel_WhenContainAllCases_ThenReturnCleanedModel() {
         Model model = ModelFactory.createDefaultModel();
-        model.read("org/dice_research/opal/catfish/dataSetWithCorrectAndBlankTheme_LiteralWithLanguageAndDataType_EmptyLiteral.ttl");
+        model.read("org/dice_research/opal/catfish/dataSetWithLanguageAndDataTypeAndEmptyLiteral.ttl");
         Model copyModel = JenaModelUtilities.getModelCopy(model);
         new Catfish(null).processModel(model, null);
         Assert.assertTrue("graph size must be less than the original graph",
