@@ -11,6 +11,7 @@ import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDF;
 import org.dice_research.opal.catfish.Catfish;
+import org.dice_research.opal.catfish.config.CleaningConfig;
 import org.dice_research.opal.common.utilities.FileHandler;
 import org.dice_research.opal.common.vocabulary.Opal;
 
@@ -23,27 +24,29 @@ public class Example {
 	 * @param turtleOutputFile A TURTLE file to write results
 	 * @param datasetUri       A URI of a dcat:Dataset inside the TURTLE data
 	 * 
-	 * @see https://www.w3.org/TR/turtle/
-	 * @see https://www.w3.org/TR/vocab-dcat/
+	 * "@see <a href="https://www.w3.org/TR/turtle/"> turtle </a>
+	 * "@see <a href="https://www.w3.org/TR/vocab-dcat/"> dcat vocabulary </a>
 	 */
 	public void cleanMetadata(File turtleInputFile, File turtleOutputFile, String datasetUri) throws Exception {
 
 		// Load TURTLE file into model
 		Model model = FileHandler.importModel(turtleInputFile);
 
-		Catfish catfish = new Catfish();
-
+		CleaningConfig cleaningConfig = new CleaningConfig();
 		// Remove blank nodes, which are not subject of triples
 		// (optional method call, default: true)
-		catfish.removeEmptyBlankNodes(true);
+		cleaningConfig.setCleanEmptyBlankNodes(true);
 
-		// Remove triples with literals as object, which contain no value
+		// Remove triples with literals as object, which contain no value or unreadable.
+		// And also extract Language Tag and DataType if it is mistakenly inside the string
 		// (optional method call, default: true)
-		catfish.removeEmptyLiterals(true);
+		cleaningConfig.setCleanLiterals(true);
 
 		// Check dct:format and dcat:mediaType for values and create new triples.
 		// (optional method call, default: true)
-		catfish.cleanFormats(true);
+		cleaningConfig.setCleanFormats(true);
+
+		Catfish catfish = new Catfish(cleaningConfig);
 
 		// Update model
 		catfish.processModel(model, datasetUri);
