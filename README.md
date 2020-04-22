@@ -60,28 +60,33 @@ public class Example {
    */
   public void cleanMetadata(File turtleInputFile, File turtleOutputFile, String datasetUri) throws Exception {
 
-    // Load TURTLE file into model
-    Model model = FileHandler.importModel(turtleInputFile);
+	// Load TURTLE file into model
+	Model model = FileHandler.importModel(turtleInputFile);
 
-    Catfish catfish = new Catfish();
+	CleaningConfig cleaningConfig = new CleaningConfig();
+	// Remove blank nodes, which are not subject of triples
+	// (optional method call, default: true)
+	cleaningConfig.setCleanEmptyBlankNodes(true);
 
-    // Remove blank nodes, which are not subject of triples
-    // (optional method call, default: true)
-    catfish.removeEmptyBlankNodes(true);
+	// Remove triples with literals as object, which contain no value or unreadable.
+	// And also extract Language Tag and DataType if it is mistakenly inside the string
+	// (optional method call, default: true)
+	cleaningConfig.setCleanLiterals(true);
 
-    // Remove triples with literals as object, which contain no value
-    // (optional method call, default: true)
-    catfish.removeEmptyLiterals(true);
+	// Check dct:format and dcat:mediaType for values and create new triples.
+	// (optional method call, default: true)
+	cleaningConfig.setCleanFormats(true);
 
-    // Check dct:format and dcat:mediaType for values and create new triples.
-    // (optional method call, default: true)
-    catfish.cleanFormats(true);
+	Catfish catfish = new Catfish(cleaningConfig);
 
-    // Update model
-    catfish.processModel(model, datasetUri);
+	// Update model
+	catfish.processModel(model, datasetUri);
 
-    // Write updated model into TURTLE file
-    FileHandler.export(turtleOutputFile, model);
+	// Example for requesting formats
+	printFormats(model, datasetUri);
+
+	// Write updated model into TURTLE file
+	FileHandler.export(turtleOutputFile, model);
   }
 }
 ```
