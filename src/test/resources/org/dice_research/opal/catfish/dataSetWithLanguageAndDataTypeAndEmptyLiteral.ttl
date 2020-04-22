@@ -39,7 +39,7 @@
         <http://purl.org/dc/terms/type>
                 <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset> ;
         <http://www.w3.org/ns/dcat#keyword>
-                "\"Využití území\"@cs" , "\"Krajinný pokryv\"@cs" , "\"Správní jednotky\"@cs" , "\"Budovy\"@cs" ;
+                "\"Využití území\"@cs" , "", "\"\"@en", "\"Krajinný pokryv\"@cs" , "\"Správní jednotky\"@cs" , "\"Budovy\"@cs" ;
         <http://www.w3.org/ns/dcat#landingPage>
                 <http://geoportal.cuzk.cz/geoprohlizec> , <http://geoportal.cuzk.cz/UKAZKOVA_DATA/SM5_RASTR_NOVA.zip> , <http://geoportal.cuzk.cz/geoprohlizec/?wmcid=502> ;
         <http://www.w3.org/ns/dcat#theme>
@@ -49,7 +49,7 @@
         <http://www.w3.org/ns/prov#wasUsedBy>
                 <d6b4b62d42cda33f87e014aa286f289f> ;
         <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
-                <26e887c905c3f3d421b2600ae55d8465> .
+                [] .
 
 <http://geoportal.cuzk.cz/geoprohlizec>
         a       <http://xmlns.com/foaf/0.1/Document> .
