@@ -24,8 +24,10 @@ public class Example {
 	 * @param turtleOutputFile A TURTLE file to write results
 	 * @param datasetUri       A URI of a dcat:Dataset inside the TURTLE data
 	 * 
-	 * "@see <a href="https://www.w3.org/TR/turtle/"> turtle </a>
-	 * "@see <a href="https://www.w3.org/TR/vocab-dcat/"> dcat vocabulary </a>
+	 *                         "@see <a href="https://www.w3.org/TR/turtle/"> turtle
+	 *                         </a> "@see
+	 *                         <a href="https://www.w3.org/TR/vocab-dcat/"> dcat
+	 *                         vocabulary </a>
 	 */
 	public void cleanMetadata(File turtleInputFile, File turtleOutputFile, String datasetUri) throws Exception {
 
@@ -38,13 +40,18 @@ public class Example {
 		cleaningConfig.setCleanEmptyBlankNodes(true);
 
 		// Remove triples with literals as object, which contain no value or unreadable.
-		// And also extract Language Tag and DataType if it is mistakenly inside the string
+		// And also extract Language Tag and DataType if it is mistakenly inside the
+		// string
 		// (optional method call, default: true)
 		cleaningConfig.setCleanLiterals(true);
 
 		// Check dct:format and dcat:mediaType for values and create new triples.
 		// (optional method call, default: true)
 		cleaningConfig.setCleanFormats(true);
+
+		// Rewrites date formats
+		// (optional method call, default: false)
+		cleaningConfig.setEqualizeDateFormats(false);
 
 		Catfish catfish = new Catfish(cleaningConfig);
 
@@ -58,40 +65,40 @@ public class Example {
 		FileHandler.export(turtleOutputFile, model);
 	}
 
-/**
- * Example for requesting formats.
- * 
- * Generated formats are of type http://projekt-opal.de/Format.
- */
-public void printFormats(Model model, String datasetUri) {
+	/**
+	 * Example for requesting formats.
+	 * 
+	 * Generated formats are of type http://projekt-opal.de/Format.
+	 */
+	public void printFormats(Model model, String datasetUri) {
 
-	// Go through Distributions of current Dataset
-	StmtIterator distributionIterator = model.getResource(datasetUri).listProperties(DCAT.distribution);
-	while (distributionIterator.hasNext()) {
-		RDFNode rdfNode = distributionIterator.next().getObject();
-		if (rdfNode.isResource()) {
-			Resource distribution = rdfNode.asResource();
+		// Go through Distributions of current Dataset
+		StmtIterator distributionIterator = model.getResource(datasetUri).listProperties(DCAT.distribution);
+		while (distributionIterator.hasNext()) {
+			RDFNode rdfNode = distributionIterator.next().getObject();
+			if (rdfNode.isResource()) {
+				Resource distribution = rdfNode.asResource();
 
-			// Get formats of current Distribution
-			StmtIterator formatIterator = distribution.listProperties(DCTerms.format);
-			while (formatIterator.hasNext()) {
-				RDFNode format = formatIterator.next().getObject();
+				// Get formats of current Distribution
+				StmtIterator formatIterator = distribution.listProperties(DCTerms.format);
+				while (formatIterator.hasNext()) {
+					RDFNode format = formatIterator.next().getObject();
 
-				// Check if type is http://projekt-opal.de/Format
-				if (format.isResource()) {
-					Statement statement = format.asResource().getProperty(RDF.type);
-					if (statement != null
-							&& statement.getObject().asResource().getURI().equals(Opal.OPAL_FORMAT.getURI())) {
+					// Check if type is http://projekt-opal.de/Format
+					if (format.isResource()) {
+						Statement statement = format.asResource().getProperty(RDF.type);
+						if (statement != null
+								&& statement.getObject().asResource().getURI().equals(Opal.OPAL_FORMAT.getURI())) {
 
-						// Prints, e.g.
-						// http://projekt-opal.de/format/pdf
-						// http://projekt-opal.de/format/html
-						System.out.println(format);
+							// Prints, e.g.
+							// http://projekt-opal.de/format/pdf
+							// http://projekt-opal.de/format/html
+							System.out.println(format);
+						}
 					}
 				}
 			}
 		}
 	}
-}
 
 }

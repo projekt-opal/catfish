@@ -77,6 +77,10 @@ public class Example {
 	// (optional method call, default: true)
 	cleaningConfig.setCleanFormats(true);
 
+	// Rewrites date formats
+	// (optional method call, default: false)
+	cleaningConfig.setEqualizeDateFormats(false);
+
 	Catfish catfish = new Catfish(cleaningConfig);
 
 	// Update model

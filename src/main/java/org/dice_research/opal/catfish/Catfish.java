@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.jena.rdf.model.Model;
 import org.dice_research.opal.catfish.config.CleaningConfig;
 import org.dice_research.opal.catfish.service.Cleanable;
+import org.dice_research.opal.catfish.service.impl.DateFormatEqualizer;
 import org.dice_research.opal.catfish.service.impl.EmptyBlankNodeCleaner;
 import org.dice_research.opal.catfish.service.impl.FormatCleaner;
 import org.dice_research.opal.catfish.service.impl.LiteralCleaner;
@@ -28,12 +29,19 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 	private List<Cleanable> getCleaners() {
 		List<Cleanable> ret = new ArrayList<>();
+
 		if (cleaningConfig.isCleanEmptyBlankNodes())
 			ret.add(new EmptyBlankNodeCleaner());
+
 		if (cleaningConfig.isCleanFormats())
 			ret.add(new FormatCleaner());
+
 		if (cleaningConfig.isCleanLiterals())
 			ret.add(new LiteralCleaner());
+
+		if (cleaningConfig.isEqualizingDateFormats())
+			ret.add(new DateFormatEqualizer());
+
 		return ret;
 	}
 
