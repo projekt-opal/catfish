@@ -81,6 +81,11 @@ public class Example {
 	// (optional method call, default: false)
 	cleaningConfig.setEqualizeDateFormats(false);
 
+	// Rewrites URIs of datasets and distributions
+	// Catalogs are listed at opal.common.constants.Catalogs
+	// (optional method call, default: null)
+	cleaningConfig.setCatalogIdToReplaceUris(null);
+
 	Catfish catfish = new Catfish(cleaningConfig);
 
 	// Update model

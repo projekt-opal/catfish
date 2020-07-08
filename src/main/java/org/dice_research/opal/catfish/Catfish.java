@@ -10,6 +10,7 @@ import org.dice_research.opal.catfish.service.impl.DateFormatEqualizer;
 import org.dice_research.opal.catfish.service.impl.EmptyBlankNodeCleaner;
 import org.dice_research.opal.catfish.service.impl.FormatCleaner;
 import org.dice_research.opal.catfish.service.impl.LiteralCleaner;
+import org.dice_research.opal.catfish.service.impl.UriRewriter;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
@@ -41,6 +42,10 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 		if (cleaningConfig.isEqualizingDateFormats())
 			ret.add(new DateFormatEqualizer());
+
+		if (cleaningConfig.getCatalogIdToReplaceUris() != null) {
+			ret.add(new UriRewriter(cleaningConfig.getCatalogIdToReplaceUris()));
+		}
 
 		return ret;
 	}

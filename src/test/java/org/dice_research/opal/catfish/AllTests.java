@@ -4,6 +4,7 @@ import org.dice_research.opal.catfish.service.DateFormatEqualizerTest;
 import org.dice_research.opal.catfish.service.EmptyBlankNodeCleanerTest;
 import org.dice_research.opal.catfish.service.FormatCleanerTest;
 import org.dice_research.opal.catfish.service.LiteralCleanerTest;
+import org.dice_research.opal.catfish.service.UriRewriterTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -19,7 +20,9 @@ import org.junit.runners.Suite.SuiteClasses;
 
 		CatfishTest.class,
 
-		DateFormatEqualizerTest.class
+		DateFormatEqualizerTest.class,
+
+		UriRewriterTest.class
 
 })
 public class AllTests {

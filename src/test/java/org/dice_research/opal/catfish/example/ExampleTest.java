@@ -24,10 +24,10 @@ public class ExampleTest {
 
 		File turtleInputFile = File.createTempFile(ExampleTest.class.getName(), ".in.txt");
 		FileHandler.export(turtleInputFile, testCase.getModel());
-//		turtleInputFile.deleteOnExit();
+		turtleInputFile.deleteOnExit();
 
 		File turtleOutputFile = File.createTempFile(ExampleTest.class.getName(), "");
-//		turtleOutputFile.deleteOnExit();
+		turtleOutputFile.deleteOnExit();
 
 		Example example = new Example();
 		example.cleanMetadata(turtleInputFile, turtleOutputFile, testCase.getDatasetUri());
