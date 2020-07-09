@@ -17,7 +17,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-import org.dice_research.opal.catfish.service.impl.FormatCleaner;
+import org.dice_research.opal.catfish.cleaner.FormatCleaner;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;

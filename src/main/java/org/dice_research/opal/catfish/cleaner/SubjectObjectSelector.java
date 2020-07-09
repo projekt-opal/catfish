@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish.service.impl;
+package org.dice_research.opal.catfish.cleaner;
 
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;

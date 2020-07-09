@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish.service.impl;
+package org.dice_research.opal.catfish.cleaner;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDF;
-import org.dice_research.opal.catfish.service.Cleanable;
+import org.dice_research.opal.common.interfaces.ModelProcessor;
 
 /**
  * Rewrites data format of datasets/distributions and modified/issued.
@@ -28,13 +28,13 @@ import org.dice_research.opal.catfish.service.Cleanable;
  * 
  * @author Adrian Wilke
  */
-public class DateFormatEqualizer implements Cleanable {
+public class DateFormatEqualizer implements ModelProcessor {
 
 	/**
 	 * Processes date formats of datasets and distributions.
 	 */
 	@Override
-	public void clean(Model model) {
+	public void processModel(Model model, String datasetUri) throws Exception {
 
 		ResIterator resIterator;
 		Resource resource;

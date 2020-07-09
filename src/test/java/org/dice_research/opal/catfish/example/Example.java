@@ -12,6 +12,7 @@ import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDF;
 import org.dice_research.opal.catfish.Catfish;
 import org.dice_research.opal.catfish.config.CleaningConfig;
+import org.dice_research.opal.common.constants.Catalogs;
 import org.dice_research.opal.common.utilities.FileHandler;
 import org.dice_research.opal.common.vocabulary.Opal;
 
@@ -56,12 +57,16 @@ public class Example {
 		// Rewrites URIs of datasets and distributions
 		// Catalogs are listed at opal.common.constants.Catalogs
 		// (optional method call, default: null)
-		cleaningConfig.setCatalogIdToReplaceUris(null);
+		cleaningConfig.setCatalogIdToReplaceUris(Catalogs.ID_MCLOUD);
 
 		Catfish catfish = new Catfish(cleaningConfig);
 
 		// Update model
 		catfish.processModel(model, datasetUri);
+
+		// Would be null, if no catalog to replace URIs was set
+		datasetUri = catfish.getNewDatasetUri();
+		System.out.println("New dataset URI: " + datasetUri);
 
 		// Example for requesting formats
 		printFormats(model, datasetUri);

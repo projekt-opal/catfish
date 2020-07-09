@@ -94,14 +94,15 @@ public class CatfishTest {
 			Assert.assertTrue(datasets.next().getURI().equals(testCase.getDatasetUri()));
 		}
 
-		new Catfish(new CleaningConfig()
+		Catfish catfish = new Catfish(new CleaningConfig()
 
 				.setCatalogIdToReplaceUris(Catalogs.ID_EUROPEANDATAPORTAL)
 
 				.setCleanEmptyBlankNodes(false).setCleanFormats(false).setCleanLiterals(false)
 				.setEqualizeDateFormats(false)
 
-		).processModel(model, null);
+		);
+		catfish.processModel(model, testCase.getDatasetUri());
 
 		Assert.assertTrue(oldSize < model.size());
 
@@ -109,6 +110,9 @@ public class CatfishTest {
 		while (datasets.hasNext()) {
 			Assert.assertFalse(datasets.next().getURI().equals(testCase.getDatasetUri()));
 		}
+
+		Assert.assertTrue(catfish.getNewDatasetUri() != null);
+		Assert.assertTrue(model.containsResource(ResourceFactory.createResource(catfish.getNewDatasetUri())));
 	}
 
 }

@@ -1,8 +1,8 @@
-package org.dice_research.opal.catfish.service;
+package org.dice_research.opal.catfish.cleaner;
 
 import java.util.List;
 
-import org.dice_research.opal.catfish.service.impl.DateFormatEqualizer;
+import org.dice_research.opal.catfish.cleaner.DateFormatEqualizer;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
 import org.junit.Before;
@@ -29,7 +29,7 @@ public class DateFormatEqualizerTest {
 	public void testDefaultTestCases() throws Exception {
 		List<TestCase> testCases = OpalTestCases.getAllTestCases();
 		for (TestCase testCase : testCases) {
-			dateFormatEqualizer.clean(testCase.getModel());
+			dateFormatEqualizer.processModel(testCase.getModel(), testCase.getDatasetUri());
 		}
 	}
 

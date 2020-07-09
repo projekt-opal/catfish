@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish.service;
+package org.dice_research.opal.catfish.cleaner;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -6,7 +6,7 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.RDF;
-import org.dice_research.opal.catfish.service.impl.FormatCleaner;
+import org.dice_research.opal.catfish.cleaner.FormatCleaner;
 import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
@@ -43,7 +43,7 @@ public class FormatCleanerTest {
 
 		testModel = JenaModelUtilities.getModelCopy(testCaseA.getModel());
 
-		new FormatCleaner().clean(testModel);
+		new FormatCleaner().clean(testModel, null);
 
 		// 6 triples for formats of 6 distributions (3xhtml, 3xpdf)
 		// 2 triples for types of formats (html, pdf)
@@ -53,7 +53,7 @@ public class FormatCleanerTest {
 
 		testModel = JenaModelUtilities.getModelCopy(testCaseA.getModel());
 
-		new FormatCleaner().clean(testModel);
+		new FormatCleaner().clean(testModel, null);
 
 		// Manual checks
 		if (Boolean.FALSE) {
@@ -89,7 +89,7 @@ public class FormatCleanerTest {
 				ResourceFactory.createPlainLiteral("http://example.com/download.php/dataset.xml"));
 
 		long originalSize = model.size();
-		new FormatCleaner().clean(model);
+		new FormatCleaner().clean(model, null);
 
 		// XML: downloadURL and type
 		Assert.assertEquals("XML format", originalSize + 2, model.size());

@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish.service.impl;
+package org.dice_research.opal.catfish.cleaner;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -10,8 +10,8 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.RDF;
-import org.dice_research.opal.catfish.service.Cleanable;
 import org.dice_research.opal.common.constants.Catalogs;
+import org.dice_research.opal.common.interfaces.ModelProcessor;
 import org.dice_research.opal.common.vocabulary.Opal;
 
 /**
@@ -21,9 +21,10 @@ import org.dice_research.opal.common.vocabulary.Opal;
  * 
  * @author Adrian Wilke
  */
-public class UriRewriter implements Cleanable {
+public class UriRewriter implements ModelProcessor {
 
 	private String catalog;
+	private String newDatasetUri;
 
 	/**
 	 * Creates new rewriter for given catalog.
@@ -43,9 +44,14 @@ public class UriRewriter implements Cleanable {
 	 * on the given catalog.
 	 */
 	@Override
-	public void clean(Model model) {
+	public void processModel(Model model, String datasetUri) throws Exception {
 		for (Resource dataset : collectResourcesOfType(model, DCAT.Dataset)) {
-			replaceAll(model, dataset, DCAT.Dataset);
+			Resource newDataset = replaceAll(model, dataset, DCAT.Dataset);
+
+			// Set the new dataset URI
+			if (dataset.getURI().equals(datasetUri)) {
+				newDatasetUri = newDataset.getURI();
+			}
 		}
 
 		for (Resource distribution : collectResourcesOfType(model, DCAT.Distribution)) {
@@ -68,7 +74,7 @@ public class UriRewriter implements Cleanable {
 	/**
 	 * Replaces resources.
 	 */
-	private void replaceAll(Model model, Resource resource, Resource resourceType) {
+	private Resource replaceAll(Model model, Resource resource, Resource resourceType) {
 		Resource newResource = getNewResource(resource.getURI(), resourceType.getURI());
 
 		// Collect statements
@@ -98,6 +104,8 @@ public class UriRewriter implements Cleanable {
 
 		// Add reference to old resource
 		model.add(newResource, Opal.PROP_ORIGINAL_URI, resource);
+
+		return newResource;
 	}
 
 	/**
@@ -122,4 +130,10 @@ public class UriRewriter implements Cleanable {
 		return ResourceFactory.createResource(newUri);
 	}
 
+	/**
+	 * Gets the replaced URI for the given datasetUri.
+	 */
+	public String getNewDatasetUri() {
+		return newDatasetUri;
+	}
 }

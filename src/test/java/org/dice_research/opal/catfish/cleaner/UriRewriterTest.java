@@ -1,4 +1,4 @@
-package org.dice_research.opal.catfish.service;
+package org.dice_research.opal.catfish.cleaner;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -6,7 +6,6 @@ import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.rdf.model.SimpleSelector;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
-import org.dice_research.opal.catfish.service.impl.UriRewriter;
 import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.common.constants.Catalogs;
 import org.dice_research.opal.test_cases.OpalTestCases;
@@ -30,9 +29,10 @@ public class UriRewriterTest {
 	}
 
 	@Test
-	public void test() {
+	public void test() throws Exception {
 		Model model = JenaModelUtilities.getModelCopy(testCaseEdp.getModel());
-		Resource originalDataset = ResourceFactory.createResource(testCaseEdp.getDatasetUri());
+		String datasetUri = testCaseEdp.getDatasetUri();
+		Resource originalDataset = ResourceFactory.createResource(datasetUri);
 		long originalSize = model.size();
 
 		int originalDatasets = 0;
@@ -50,10 +50,14 @@ public class UriRewriterTest {
 		}
 
 		UriRewriter uriRewriter = new UriRewriter(Catalogs.ID_EUROPEANDATAPORTAL);
-		uriRewriter.clean(model);
+		uriRewriter.processModel(model, datasetUri);
 
 		// Original triples with new URIs and Opal.PROP_ORIGINAL_URI triples
 		Assert.assertEquals(originalSize + originalDatasets + originalDistributions, model.size());
+
+		// Uri rewritten
+		Assert.assertTrue(uriRewriter.getNewDatasetUri() != null);
+		Assert.assertTrue(model.containsResource(ResourceFactory.createResource(uriRewriter.getNewDatasetUri())));
 
 		int oldDatasetObject = 0;
 		stmtIterator = model.listStatements(new SimpleSelector(null, null, originalDataset));

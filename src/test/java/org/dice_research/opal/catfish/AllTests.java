@@ -1,10 +1,10 @@
 package org.dice_research.opal.catfish;
 
-import org.dice_research.opal.catfish.service.DateFormatEqualizerTest;
-import org.dice_research.opal.catfish.service.EmptyBlankNodeCleanerTest;
-import org.dice_research.opal.catfish.service.FormatCleanerTest;
-import org.dice_research.opal.catfish.service.LiteralCleanerTest;
-import org.dice_research.opal.catfish.service.UriRewriterTest;
+import org.dice_research.opal.catfish.cleaner.DateFormatEqualizerTest;
+import org.dice_research.opal.catfish.cleaner.EmptyBlankNodeCleanerTest;
+import org.dice_research.opal.catfish.cleaner.FormatCleanerTest;
+import org.dice_research.opal.catfish.cleaner.LiteralCleanerTest;
+import org.dice_research.opal.catfish.cleaner.UriRewriterTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
