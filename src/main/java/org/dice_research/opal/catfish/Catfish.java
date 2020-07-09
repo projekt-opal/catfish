@@ -8,6 +8,7 @@ import org.dice_research.opal.catfish.cleaner.DateFormatEqualizer;
 import org.dice_research.opal.catfish.cleaner.EmptyBlankNodeCleaner;
 import org.dice_research.opal.catfish.cleaner.FormatCleaner;
 import org.dice_research.opal.catfish.cleaner.LiteralCleaner;
+import org.dice_research.opal.catfish.cleaner.TitleLanguageFilter;
 import org.dice_research.opal.catfish.cleaner.UriRewriter;
 import org.dice_research.opal.catfish.config.CleaningConfig;
 import org.dice_research.opal.common.interfaces.JenaModelProcessor;
@@ -30,6 +31,9 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 
 	private List<ModelProcessor> getModelProcessors() {
 		List<ModelProcessor> modelProcessors = new LinkedList<>();
+
+		if (cleaningConfig.isRemovingNonDeEnTitleDatasets())
+			modelProcessors.add(new TitleLanguageFilter());
 
 		if (cleaningConfig.isCleanEmptyBlankNodes())
 			modelProcessors.add(new EmptyBlankNodeCleaner());

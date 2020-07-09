@@ -59,6 +59,11 @@ public class Example {
 		// (optional method call, default: null)
 		cleaningConfig.setCatalogIdToReplaceUris(Catalogs.ID_MCLOUD);
 
+		// Removes datasets, which do not have a german and an english title.
+		// Additionally, non-german and non-english titles and descriptions are removed.
+		// (optional method call, default: false)
+		cleaningConfig.setRemoveNonDeEnTitleDatasets(false);
+
 		Catfish catfish = new Catfish(cleaningConfig);
 
 		// Update model

@@ -23,6 +23,29 @@ import org.junit.Test;
 public class CatfishTest {
 
 	@Test
+	public void testRemoveNonDeEnTitleDatasets() throws IOException {
+		TestCase testCase = OpalTestCases.getTestCase("edp-2019-12-17", "med-kodierungshandbuch");
+
+		// Enable additionally
+		Model modelCopy = JenaModelUtilities.getModelCopy(testCase.getModel());
+		Catfish catfish = new Catfish(new CleaningConfig().setRemoveNonDeEnTitleDatasets(true));
+		catfish.processModel(modelCopy, testCase.getDatasetUri());
+		Assert.assertEquals(0, modelCopy.size());
+
+		// Enable all
+		modelCopy = JenaModelUtilities.getModelCopy(testCase.getModel());
+		catfish = new Catfish(new CleaningConfig() //
+				.setCatalogIdToReplaceUris(Catalogs.ID_EUROPEANDATAPORTAL) //
+				.setCleanEmptyBlankNodes(true) //
+				.setCleanFormats(true) //
+				.setCleanLiterals(true) //
+				.setEqualizeDateFormats(true) //
+				.setRemoveNonDeEnTitleDatasets(true));
+		catfish.processModel(modelCopy, testCase.getDatasetUri());
+		Assert.assertEquals(0, modelCopy.size());
+	}
+
+	@Test
 	public void testGivenModel_WhenCleanWithAllCleanables_ThenReturnCleanedModel() throws IOException {
 		TestCase testCase = OpalTestCases.getTestCase("edp-2019-12-17", "med-kodierungshandbuch");
 		Model copyModel = JenaModelUtilities.getModelCopy(testCase.getModel());
