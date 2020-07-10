@@ -28,7 +28,11 @@ import org.dice_research.opal.common.interfaces.ModelProcessor;
 import org.dice_research.opal.common.vocabulary.Opal;
 
 /**
- * Handles data formats.
+ * Adds formats to distributions.
+ * 
+ * Uses predicate {@link DCTerms#format}.
+ * 
+ * Created formats are of type {@link Opal#OPAL_FORMAT}.
  *
  * @author Adrian Wilke
  */

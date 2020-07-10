@@ -10,6 +10,7 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
 import org.apache.jena.vocabulary.RDF;
+import org.dice_research.opal.catfish.utils.SubjectObjectSelector;
 import org.dice_research.opal.common.constants.Catalogs;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 import org.dice_research.opal.common.vocabulary.Opal;

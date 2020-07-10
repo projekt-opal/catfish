@@ -6,6 +6,7 @@ import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.rdf.model.SimpleSelector;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.DCAT;
+import org.dice_research.opal.catfish.cleaner.UriRewriter;
 import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.common.constants.Catalogs;
 import org.dice_research.opal.test_cases.OpalTestCases;

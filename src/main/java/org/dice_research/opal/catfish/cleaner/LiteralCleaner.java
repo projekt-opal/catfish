@@ -1,142 +1,142 @@
 package org.dice_research.opal.catfish.cleaner;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.HashSet;
+import java.util.Set;
 
-import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Selector;
 import org.apache.jena.rdf.model.Statement;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+/**
+ * Removes triples containing unspecified languages from model.
+ * 
+ * Removes empty literals.
+ *
+ * @author Adrian Wilke
+ */
 public class LiteralCleaner implements ModelProcessor {
 
-	private static final Logger logger = LoggerFactory.getLogger(LiteralCleaner.class);
+	private boolean removeEmptyLiterals;
+	private Set<String> whitelistExactLanguages;
+	private Set<String> whitelistLanguagePrefixes;
 
-	private final List<LiteralByRegexCleaner> regexCleaners = Arrays.asList(new LanguageByRegexCleaner(),
-			new DataTypeByRegexCleaner(), new NonReadableAndEmptyLiterByRegexCleaner());
+	/**
+	 * Removes all empty literals.
+	 * 
+	 * Does not remove literals with language tag 'de', 'en' and literals without
+	 * language tag.
+	 * 
+	 * Does also not remove literals with prefixes 'de-' and 'en-'.
+	 */
+	public LiteralCleaner() {
+		removeEmptyLiterals = true;
+
+		whitelistExactLanguages = new HashSet<>();
+		whitelistExactLanguages.add("de");
+		whitelistExactLanguages.add("en");
+		whitelistExactLanguages.add("");
+
+		whitelistLanguagePrefixes = new HashSet<>();
+		whitelistLanguagePrefixes.add("de-");
+		whitelistLanguagePrefixes.add("en-");
+	}
+
+	public LiteralCleaner(boolean removeEmptyLiterals, Set<String> whitelistExactLanguages,
+			Set<String> whitelistLanguagePrefixes) {
+
+		if (whitelistExactLanguages == null || whitelistLanguagePrefixes == null) {
+			throw new NullPointerException();
+		}
+
+		this.removeEmptyLiterals = removeEmptyLiterals;
+		this.whitelistExactLanguages = whitelistExactLanguages;
+		this.whitelistLanguagePrefixes = whitelistLanguagePrefixes;
+	}
 
 	@Override
 	public void processModel(Model model, String datasetUri) throws Exception {
-		try {
-			regexCleaners.forEach(byRegexCleaner -> {
-				List<Statement> statements = model.listStatements().toList();
-				statements.forEach(statement -> byRegexCleaner.cleanByRegex(model, statement));
-			});
-		} catch (Exception e) {
-			logger.error("Error in cleaning literals", e);
-		}
+		model.remove(model.listStatements(new Selector() {
+
+			@Override
+			public boolean test(Statement stmt) {
+
+				// No literal: Do not remove
+				if (!stmt.getObject().isLiteral()) {
+					return false;
+				}
+
+				// Remove empty literals
+				if (removeEmptyLiterals && stmt.getObject().asLiteral().getString().trim().isEmpty()) {
+					return true;
+				}
+
+				String language = getLanguageOfLiteral(stmt.getObject());
+
+				// Do not remove exact whitelist
+				if (whitelistExactLanguages.contains(language)) {
+					return false;
+				}
+
+				// Do not remove prefix whitelist
+				for (String prefix : whitelistLanguagePrefixes) {
+					if (language.startsWith(prefix)) {
+						return false;
+					}
+				}
+
+				// Other languages: remove
+				return true;
+			}
+
+			@Override
+			public boolean isSimple() {
+				return false;
+			}
+
+			@Override
+			public Resource getSubject() {
+				return null;
+			}
+
+			@Override
+			public Property getPredicate() {
+				return null;
+			}
+
+			@Override
+			public RDFNode getObject() {
+				return null;
+			}
+		}));
 	}
-}
 
-abstract class LiteralByRegexCleaner {
+	public static String getLanguageOfLiteral(RDFNode literal) {
+		String language = "";
 
-	private static final Logger logger = LoggerFactory.getLogger(LiteralByRegexCleaner.class);
-	private final String regex;
+		if (literal.isLiteral()) {
+			language = literal.asLiteral().getLanguage();
 
-	protected LiteralByRegexCleaner(String regex) {
-		this.regex = regex;
-	}
+			// Workaround for wrong parsing (occurred while reading nt file)
+			if (language.trim().isEmpty()) {
+				int index = literal.toString().lastIndexOf("\"@");
+				if (index != -1) {
 
-	public void cleanByRegex(Model model, Statement statement) {
-		try {
-			RDFNode object = statement.getObject();
-			if (object.isLiteral()) {
-				Literal literal = object.asLiteral();
-				String value = literal.getString().trim();
-				Pattern pattern = Pattern.compile(regex);
-				Matcher m = pattern.matcher(value);
-				if (m.find()) {
-					model.remove(statement);
-					if (m.groupCount() > 1) {
-						Literal modelLiteral = createNewLiteral(model, m.group(1), m.group(2));
-						model.add(statement.getSubject(), statement.getPredicate(), modelLiteral);
+					// Get language
+					language = literal.toString().substring(index + 2);
+
+					// Avoid language tag inside text
+					if (language.contains("\"")) {
+						language = "";
 					}
 				}
 			}
-		} catch (Exception e) {
-			logger.error("Error in cleaning by regex", e);
 		}
 
+		return language;
 	}
 
-	abstract Literal createNewLiteral(Model model, String g1, String g2);
-}
-
-class LanguageByRegexCleaner extends LiteralByRegexCleaner {
-
-	/**
-	 * It will select strings that have @ and 2 characters in the end of the string
-	 * description of regex from regex101.com: * " matches the character " literally
-	 * (case sensitive) * 1st Capturing Group (.*) * .* matches any character
-	 * (except for line terminators) * * Quantifier — Matches between zero and
-	 * unlimited times, as many times as possible, giving back as needed (greedy) *
-	 * "@ matches the characters "@ literally (case sensitive) * 2nd Capturing Group
-	 * (..) * . matches any character (except for line terminators) * . matches any
-	 * character (except for line terminators)
-	 */
-	LanguageByRegexCleaner() {
-		super("\"(.*)\"@(..)");
-	}
-
-	@Override
-	Literal createNewLiteral(Model model, String g1, String g2) {
-		return model.createLiteral(g1, g2);
-	}
-}
-
-class DataTypeByRegexCleaner extends LiteralByRegexCleaner {
-
-	/**
-	 * It will select string that has a dcat datatype in the end which started with
-	 * ^^ then has a prefix and then : in between, for something like ^^xsd:string
-	 * or ^^http://www.w3.org/2001/XMLSchema#string description of regex from
-	 * regex101.com: * " matches the character " literally (case sensitive) * 1st
-	 * Capturing Group (.*) * .* matches any character (except for line terminators)
-	 * * * Quantifier — Matches between zero and unlimited times, as many times as
-	 * possible, giving back as needed (greedy) * " matches the character "
-	 * literally (case sensitive) * \^ matches the character ^ literally (case
-	 * sensitive) * \^ matches the character ^ literally (case sensitive) * 2nd
-	 * Capturing Group (.*:.*) * .* matches any character (except for line
-	 * terminators) * * Quantifier — Matches between zero and unlimited times, as
-	 * many times as possible, giving back as needed (greedy) * : matches the
-	 * character : literally (case sensitive) * .* matches any character (except for
-	 * line terminators)
-	 */
-	DataTypeByRegexCleaner() {
-		super("\"(.*)\"\\^\\^(.*:.*)");
-	}
-
-	@Override
-	Literal createNewLiteral(Model model, String g1, String g2) {
-		return model.createTypedLiteral(g1, g2);
-	}
-}
-
-class NonReadableAndEmptyLiterByRegexCleaner extends LiteralByRegexCleaner {
-
-	/**
-	 * It checks any string that does not have any character or number. Example:
-	 * "@#$%" or empty string description of regex from regex101.com: * ^ asserts
-	 * position at start of a line * Match a single character not present in the
-	 * list below [^a-zA-Z0-9]* * * Quantifier — Matches between zero and unlimited
-	 * times, as many times as possible, giving back as needed (greedy) * a-z a
-	 * single character in the range between a (index 97) and z (index 122) (case
-	 * sensitive) * A-Z a single character in the range between A (index 65) and Z
-	 * (index 90) (case sensitive) * 0-9 a single character in the range between 0
-	 * (index 48) and 9 (index 57) (case sensitive) * $ asserts position at the end
-	 * of a line
-	 */
-	protected NonReadableAndEmptyLiterByRegexCleaner() {
-		super("^[^a-zA-Z0-9]*$");
-	}
-
-	@Override
-	Literal createNewLiteral(Model model, String g1, String g2) {
-		return null;
-	}
 }

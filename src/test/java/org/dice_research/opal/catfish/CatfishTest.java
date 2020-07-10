@@ -40,6 +40,7 @@ public class CatfishTest {
 				.setCleanFormats(true) //
 				.setCleanLiterals(true) //
 				.setEqualizeDateFormats(true) //
+
 				.setRemoveNonDeEnTitleDatasets(true));
 		catfish.processModel(modelCopy, testCase.getDatasetUri());
 		Assert.assertEquals(0, modelCopy.size());

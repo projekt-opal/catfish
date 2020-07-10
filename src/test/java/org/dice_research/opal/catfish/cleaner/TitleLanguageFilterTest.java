@@ -4,6 +4,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.vocabulary.DCTerms;
+import org.dice_research.opal.catfish.cleaner.TitleLanguageFilter;
 import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
@@ -60,8 +61,6 @@ public class TitleLanguageFilterTest {
 		// Add en title
 		dataset.addLiteral(DCTerms.title, ResourceFactory.createLangLiteral("my title", "en"));
 
-		// Add another title to be removed
-		dataset.addLiteral(DCTerms.title, ResourceFactory.createLangLiteral("x", "languageToRemove"));
 		new TitleLanguageFilter().processModel(model, datasetUri);
 
 		Assert.assertEquals(originalSize + 1, model.size());

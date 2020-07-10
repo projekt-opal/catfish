@@ -64,6 +64,9 @@ public class Example {
 		// (optional method call, default: false)
 		cleaningConfig.setRemoveNonDeEnTitleDatasets(false);
 
+		// Removes literals, which are not empty, german or english
+		cleaningConfig.setRemoveNonDeEnEmptyTitleLiterals(false);
+
 		Catfish catfish = new Catfish(cleaningConfig);
 
 		// Update model

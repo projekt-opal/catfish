@@ -6,6 +6,7 @@ public class CleaningConfig {
 	private boolean cleanLiterals = true;
 	private boolean equalizeDateFormats = false;
 	private boolean removeNonDeEnTitleDatasets = false;
+	private boolean removeNonDeEnEmptyTitleLiterals = false;
 	private String catalogIdToReplaceUris = null;
 
 	public boolean isCleanEmptyBlankNodes() {
@@ -59,6 +60,15 @@ public class CleaningConfig {
 
 	public CleaningConfig setRemoveNonDeEnTitleDatasets(boolean removeNonDeEnTitleDatasets) {
 		this.removeNonDeEnTitleDatasets = removeNonDeEnTitleDatasets;
+		return this;
+	}
+
+	public boolean isRemovingNonDeEnEmptyTitleLiterals() {
+		return removeNonDeEnEmptyTitleLiterals;
+	}
+
+	public CleaningConfig setRemoveNonDeEnEmptyTitleLiterals(boolean removeNonDeEnEmptyTitleLiterals) {
+		this.removeNonDeEnEmptyTitleLiterals = removeNonDeEnEmptyTitleLiterals;
 		return this;
 	}
 }

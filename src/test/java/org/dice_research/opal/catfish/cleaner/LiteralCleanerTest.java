@@ -11,7 +11,7 @@ import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.VCARD4;
-import org.dice_research.opal.catfish.cleaner.LiteralCleaner;
+import org.dice_research.opal.catfish.cleaner.LiteralEncodingCleaner;
 import org.dice_research.opal.catfish.utility.JenaModelUtilities;
 import org.dice_research.opal.test_cases.OpalTestCases;
 import org.dice_research.opal.test_cases.TestCase;
@@ -24,7 +24,7 @@ public class LiteralCleanerTest {
 	public void givenModel_WhenContainsLanguageAndDataTypedLiterals_ThenCleanTheStructure() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
 		model.read("org/dice_research/opal/catfish/dataSetWithLanguagesAndDataTypedLiteral.nt");
-		new LiteralCleaner().processModel(model, null);
+		new LiteralEncodingCleaner().processModel(model, null);
 		List<Statement> statements = model.listStatements().toList();
 		statements.forEach(statement -> {
 			RDFNode object = statement.getObject();
@@ -41,7 +41,7 @@ public class LiteralCleanerTest {
 		TestCase testCase = OpalTestCases.getTestCase("edp-2019-12-17", "med-kodierungshandbuch");
 
 		Model testModel = JenaModelUtilities.getModelCopy(testCase.getModel());
-		new LiteralCleaner().processModel(testModel, null);
+		new LiteralEncodingCleaner().processModel(testModel, null);
 		Assert.assertTrue("StructuralCleaner removes empty literal", testModel.size() < testCase.getModel().size());
 
 		Resource dataset = testModel.getResource(testCase.getDatasetUri());

@@ -8,6 +8,7 @@ import org.dice_research.opal.catfish.cleaner.DateFormatEqualizer;
 import org.dice_research.opal.catfish.cleaner.EmptyBlankNodeCleaner;
 import org.dice_research.opal.catfish.cleaner.FormatCleaner;
 import org.dice_research.opal.catfish.cleaner.LiteralCleaner;
+import org.dice_research.opal.catfish.cleaner.LiteralEncodingCleaner;
 import org.dice_research.opal.catfish.cleaner.TitleLanguageFilter;
 import org.dice_research.opal.catfish.cleaner.UriRewriter;
 import org.dice_research.opal.catfish.config.CleaningConfig;
@@ -32,21 +33,37 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 	private List<ModelProcessor> getModelProcessors() {
 		List<ModelProcessor> modelProcessors = new LinkedList<>();
 
-		if (cleaningConfig.isRemovingNonDeEnTitleDatasets())
-			modelProcessors.add(new TitleLanguageFilter());
+		// RDF cleaning
 
+		// Remove blank nodes, which are not used as triple-subject
 		if (cleaningConfig.isCleanEmptyBlankNodes())
 			modelProcessors.add(new EmptyBlankNodeCleaner());
 
+		// Remove empty literals
+		// Remove non-de-en-empty literals
+		if (cleaningConfig.isRemovingNonDeEnEmptyTitleLiterals())
+			modelProcessors.add(new LiteralCleaner());
+
+		// Remove datasets not having an english an an german title
+		if (cleaningConfig.isRemovingNonDeEnTitleDatasets())
+			modelProcessors.add(new TitleLanguageFilter());
+
+		// Clean wrong encoded literals
+		if (cleaningConfig.isCleanLiterals())
+			modelProcessors.add(new LiteralEncodingCleaner());
+
+		// Extension
+
+		// Adds unified formats to distributions
 		if (cleaningConfig.isCleanFormats())
 			modelProcessors.add(new FormatCleaner());
 
-		if (cleaningConfig.isCleanLiterals())
-			modelProcessors.add(new LiteralCleaner());
-
+		// Replace XSDDateType dates
 		if (cleaningConfig.isEqualizingDateFormats())
 			modelProcessors.add(new DateFormatEqualizer());
 
+		// Last step
+		// Replace dataset URIs
 		if (cleaningConfig.getCatalogIdToReplaceUris() != null) {
 			modelProcessors.add(new UriRewriter(cleaningConfig.getCatalogIdToReplaceUris()));
 		}

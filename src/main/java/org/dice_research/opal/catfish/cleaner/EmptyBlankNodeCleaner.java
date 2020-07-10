@@ -9,7 +9,7 @@ import org.apache.jena.rdf.model.StmtIterator;
 import org.dice_research.opal.common.interfaces.ModelProcessor;
 
 /**
- * Cleans structural contents, e.g. empty values.
+ * Removes blank nodes, which are not used as triple-subject.
  *
  * @author Adrian Wilke
  */

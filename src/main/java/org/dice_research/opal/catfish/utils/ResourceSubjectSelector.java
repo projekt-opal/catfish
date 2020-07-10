@@ -1,4 +1,5 @@
-package org.dice_research.opal.catfish.cleaner;
+package org.dice_research.opal.catfish.utils;
+
 
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
@@ -7,33 +8,31 @@ import org.apache.jena.rdf.model.Selector;
 import org.apache.jena.rdf.model.Statement;
 
 /**
- * Selects all statements, having a subject or object equal to the selector
- * resource.
- * 
+ * Selects triples containing resource as subject.
+ *
  * @author Adrian Wilke
  */
-public class SubjectObjectSelector implements Selector {
+public class ResourceSubjectSelector implements Selector {
 
 	private Resource resource;
 
-	public SubjectObjectSelector(Resource resource) {
+	public ResourceSubjectSelector(Resource resource) {
 		this.resource = resource;
 	}
 
 	@Override
-	public boolean test(Statement s) {
-		return (resource == null || resource.equals(s.getSubject())) || resource.equals(s.getObject());
-	}
-
-	@Override
-	public boolean isSimple() {
-		// Use test(...) instead of getSubject() getPredicate() getObject()
+	public boolean test(Statement t) {
 		return false;
 	}
 
 	@Override
+	public boolean isSimple() {
+		return true;
+	}
+
+	@Override
 	public Resource getSubject() {
-		return null;
+		return resource;
 	}
 
 	@Override
