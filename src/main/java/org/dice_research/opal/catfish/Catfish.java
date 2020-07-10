@@ -58,7 +58,7 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 		if (cleaningConfig.isCleanFormats())
 			modelProcessors.add(new FormatCleaner());
 
-		// Replace XSDDateType dates
+		// Replace dates of predicates issued and modified
 		if (cleaningConfig.isEqualizingDateFormats())
 			modelProcessors.add(new DateFormatEqualizer());
 

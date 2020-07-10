@@ -1,12 +1,13 @@
 package org.dice_research.opal.catfish.config;
 
 public class CleaningConfig {
+	
 	private boolean cleanEmptyBlankNodes = true;
-	private boolean cleanFormats = true;
-	private boolean cleanLiterals = true;
-	private boolean equalizeDateFormats = false;
-	private boolean removeNonDeEnTitleDatasets = false;
 	private boolean removeNonDeEnEmptyTitleLiterals = false;
+	private boolean removeNonDeEnTitleDatasets = false;
+	private boolean cleanLiterals = true;
+	private boolean cleanFormats = true;
+	private boolean equalizeDateFormats = false;
 	private String catalogIdToReplaceUris = null;
 
 	public boolean isCleanEmptyBlankNodes() {

@@ -67,43 +67,43 @@ public class CatfishTest {
 	@Test
 	public void testDataFormatEqualizer() throws Exception {
 
-		TestCase testCase = OpalTestCases.getTestCase("edp-2019-12-17", "orenhofen");
+		TestCase testCase = OpalTestCases.getTestCase("edp-2019-12-17", "med-kodierungshandbuch");
 		Resource dataset = ResourceFactory.createResource(testCase.getDatasetUri());
 		Model model = JenaModelUtilities.getModelCopy(testCase.getModel());
 
 		// Check if original model contains date
 		boolean hasDate = false;
 		boolean hasDateTime = false;
-		NodeIterator nodeIterator = model.listObjectsOfProperty(dataset, DCTerms.modified);
+		NodeIterator nodeIterator = model.listObjectsOfProperty(dataset, DCTerms.issued);
 		while (nodeIterator.hasNext()) {
 			RDFNode rdfNode = nodeIterator.next();
-			if (rdfNode.toString().endsWith("^^http://www.w3.org/2001/XMLSchema#date")) {
+			if (rdfNode.asLiteral().getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#date")) {
 				hasDate = true;
 			}
-			if (rdfNode.toString().endsWith("^^http://www.w3.org/2001/XMLSchema#dateTime")) {
+			if (rdfNode.asLiteral().getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#dateTime")) {
 				hasDateTime = true;
 			}
 		}
-		Assert.assertTrue(hasDate);
-		Assert.assertFalse(hasDateTime);
+		Assert.assertFalse(hasDate);
+		Assert.assertTrue(hasDateTime);
 
 		// Check if processed model does NOT contain date
 		Model copyModel = JenaModelUtilities.getModelCopy(testCase.getModel());
 		new Catfish(new CleaningConfig().setEqualizeDateFormats(true)).processModel(copyModel, null);
 		hasDate = false;
 		hasDateTime = false;
-		nodeIterator = copyModel.listObjectsOfProperty(dataset, DCTerms.modified);
+		nodeIterator = copyModel.listObjectsOfProperty(dataset, DCTerms.issued);
 		while (nodeIterator.hasNext()) {
 			RDFNode rdfNode = nodeIterator.next();
-			if (rdfNode.toString().endsWith("^^http://www.w3.org/2001/XMLSchema#date")) {
+			if (rdfNode.asLiteral().getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#date")) {
 				hasDate = true;
 			}
-			if (rdfNode.toString().endsWith("^^http://www.w3.org/2001/XMLSchema#dateTime")) {
+			if (rdfNode.asLiteral().getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#dateTime")) {
 				hasDateTime = true;
 			}
 		}
-		Assert.assertFalse(hasDate);
-		Assert.assertTrue(hasDateTime);
+		Assert.assertTrue(hasDate);
+		Assert.assertFalse(hasDateTime);
 	}
 
 	@Test

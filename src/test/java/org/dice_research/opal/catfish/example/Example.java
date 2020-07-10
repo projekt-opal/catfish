@@ -36,9 +36,18 @@ public class Example {
 		Model model = FileHandler.importModel(turtleInputFile);
 
 		CleaningConfig cleaningConfig = new CleaningConfig();
+		
 		// Remove blank nodes, which are not subject of triples
 		// (optional method call, default: true)
 		cleaningConfig.setCleanEmptyBlankNodes(true);
+
+		// Removes literals, which are not empty, german or english
+		cleaningConfig.setRemoveNonDeEnEmptyTitleLiterals(false);
+
+		// Removes datasets, which do not have a german and an english title.
+		// Additionally, non-german and non-english titles and descriptions are removed.
+		// (optional method call, default: false)
+		cleaningConfig.setRemoveNonDeEnTitleDatasets(false);
 
 		// Remove triples with literals as object, which contain no value or unreadable.
 		// And also extract Language Tag and DataType if it is mistakenly inside the
@@ -58,14 +67,6 @@ public class Example {
 		// Catalogs are listed at opal.common.constants.Catalogs
 		// (optional method call, default: null)
 		cleaningConfig.setCatalogIdToReplaceUris(Catalogs.ID_MCLOUD);
-
-		// Removes datasets, which do not have a german and an english title.
-		// Additionally, non-german and non-english titles and descriptions are removed.
-		// (optional method call, default: false)
-		cleaningConfig.setRemoveNonDeEnTitleDatasets(false);
-
-		// Removes literals, which are not empty, german or english
-		cleaningConfig.setRemoveNonDeEnEmptyTitleLiterals(false);
 
 		Catfish catfish = new Catfish(cleaningConfig);
 
