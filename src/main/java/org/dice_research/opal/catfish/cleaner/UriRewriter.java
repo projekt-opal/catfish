@@ -47,16 +47,42 @@ public class UriRewriter implements ModelProcessor {
 	@Override
 	public void processModel(Model model, String datasetUri) throws Exception {
 		for (Resource dataset : collectResourcesOfType(model, DCAT.Dataset)) {
+
 			Resource newDataset = replaceAll(model, dataset, DCAT.Dataset);
 
-			// Set the new dataset URI
+			// Limit to the dataset to process
 			if (dataset.getURI().equals(datasetUri)) {
+
+				// Set the new dataset URI
 				newDatasetUri = newDataset.getURI();
+
+				// Add original catalog
+				addCatalog(model, newDataset);
 			}
 		}
 
 		for (Resource distribution : collectResourcesOfType(model, DCAT.Distribution)) {
 			replaceAll(model, distribution, DCAT.Distribution);
+		}
+	}
+
+	/**
+	 * Adds triple with original catalog
+	 */
+	private void addCatalog(Model model, Resource dataset) {
+		String catalogUri = null;
+		if (catalog.equals(Catalogs.ID_EUROPEANDATAPORTAL)) {
+			catalogUri = Catalogs.URI_EUROPEANDATAPORTAL;
+		} else if (catalog.equals(Catalogs.ID_GOVDATA)) {
+			catalogUri = Catalogs.URI_GOVDATA;
+		} else if (catalog.equals(Catalogs.ID_MCLOUD)) {
+			catalogUri = Catalogs.URI_MCLOUD;
+		} else if (catalog.equals(Catalogs.ID_MDM)) {
+			catalogUri = Catalogs.URI_MDM;
+		}
+
+		if (catalogUri != null) {
+			model.add(dataset, DCAT.catalog, ResourceFactory.createResource(catalogUri));
 		}
 	}
 

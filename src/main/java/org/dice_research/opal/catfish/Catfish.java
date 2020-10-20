@@ -63,7 +63,7 @@ public class Catfish implements ModelProcessor, JenaModelProcessor {
 			modelProcessors.add(new DateFormatEqualizer());
 
 		// Last step
-		// Replace dataset URIs
+		// Replace dataset URIs and add triple to original catalog 
 		if (cleaningConfig.getCatalogIdToReplaceUris() != null) {
 			modelProcessors.add(new UriRewriter(cleaningConfig.getCatalogIdToReplaceUris()));
 		}

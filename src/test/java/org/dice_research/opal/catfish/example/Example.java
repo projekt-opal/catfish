@@ -36,7 +36,7 @@ public class Example {
 		Model model = FileHandler.importModel(turtleInputFile);
 
 		CleaningConfig cleaningConfig = new CleaningConfig();
-		
+
 		// Remove blank nodes, which are not subject of triples
 		// (optional method call, default: true)
 		cleaningConfig.setCleanEmptyBlankNodes(true);
@@ -65,6 +65,7 @@ public class Example {
 
 		// Rewrites URIs of datasets and distributions
 		// Catalogs are listed at opal.common.constants.Catalogs
+		// Also adds triple to original catalog
 		// (optional method call, default: null)
 		cleaningConfig.setCatalogIdToReplaceUris(Catalogs.ID_MCLOUD);
 
